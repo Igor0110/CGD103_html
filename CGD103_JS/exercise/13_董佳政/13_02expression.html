@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 36px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const totalSecond = 8000;
+        // const totalSecond = 9666;
+        const hour = parseInt(totalSecond / 3600);
+        const min = parseInt((totalSecond - hour * 3600) / 60);
+        const second = (totalSecond - hour * 3600) % 60;
+        document.write('現在時間', `${hour}:${min}:${second < 10 ? '0' + second : second}`);
+        // document.write('現在時間', `${hour}:${min}:${second}`);
+    </script>
+</body>
+
+</html>

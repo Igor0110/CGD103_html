@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inputbox{
+            display: flex;
+            
+
+        }
+        .inputbox div{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>作業 14 :14BMI.html     : (事件驅動程式設計) </h2>
+    <p>令使用者可以在網頁上輸入身高、體重,，寫程式可以告訢使用者他目前的身材是否很OK</p>
+    <div class="container">
+        <div class="row">
+            <form>
+                <div>
+                    <label>
+                        身高：
+                        <input type="height" id="user_height" value="">
+                        cm
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        體重：
+                        <input type="weight" id="user_weight" value="">
+                        kg
+                    </label>
+                </div>
+                
+                <div>
+                    <p class="answer" id="BMI" ></p>
+                </div>
+                <div class="inputbox">
+                    <div>
+                            <input type="submit" class="cal" value="計算" >
+                    </div>
+                    <div>
+                            <input type="reset" >
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        let answer = document.querySelector(".answer");
+
+        function BMI() {
+            event.preventDefault();
+            let height = document.querySelector("#user_height").value/100;
+            let weight = document.querySelector("#user_weight").value;
+
+            console.log(height);
+            console.log(weight);
+            let BMI = weight / (height * height);
+            
+            console.log(BMI);
+            // window.alert(BMI);
+         
+            BMI = BMI.toFixed(2)
+            if (BMI >= 35){
+                answer.textContent = `BMI: ${BMI} 提醒:重度肥胖`;
+            }else if ( BMI < 35 && BMI >= 30){
+                answer.textContent = `BMI: ${BMI} 提醒:中度肥胖`;
+            }else if (BMI < 30 && BMI >= 27 ){
+                answer.textContent = `BMI: ${BMI} 提醒:輕度肥胖`;
+            }else if (BMI < 27 && BMI >= 24){
+                answer.textContent = `BMI: ${BMI} 提醒:過重`;
+            }else if (BMI < 24 && BMI >= 18.5){
+                answer.textContent = `BMI: ${BMI} 提醒:正常範圍`;
+            }else if (BMI < 18.5){
+                answer.textContent = `BMI: ${BMI} 提醒:體重過輕`;
+            }
+
+
+
+        }
+        let cal = document.querySelector(".cal");
+        cal.addEventListener("click",BMI);
+
+
+
+
+        // if (w == "" || h == "" ){
+        //     return feedback.innerHTML="身高體重不可為空白"
+        // }else {
+        //     BMIans.innerHTML = BMIans
+        //     BMIans.innerHTML = BMIans
+
+        // }
+
+
+    </script>
+    
+</body>
+</html>

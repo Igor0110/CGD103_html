@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../grid.css">
+    <style>
+        .c1{
+            background-color: aquamarine;
+        }
+        .c2{
+            background-color: palegreen;
+        }
+        .c3{
+            background-color: palevioletred;
+        }
+        .c4{
+            background-color: peachpuff;
+        }
+        .c4{
+            background-color: plum;
+        }
+        .c5{
+            background-color: peru;
+        }
+        .container{
+            /* display: flex;
+            flex-direction: column; */
+        }
+        .container .row{
+            height: 200px;
+        }
+        /* md */
+        @media screen and (min-width: 768px) {}
+        /* lg */
+        @media screen and (min-width: 1024px) {}
+        /* xl */
+        @media screen and (min-width: 1200px) {}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-6 ">
+            <div class="col c1">1</div>
+            <div class="col c2">2</div>
+            <div class="col c3">3</div>
+            <div class="col c4">4</div>
+            <div class="col c5">5</div>
+        </div>
+    </div>
+</body>
+</html>

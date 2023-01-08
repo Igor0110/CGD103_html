@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>ID:</span>
+    <input type="text" name="" id="idNum">
+    <button id="btn">Check</button>
+    <script>
+        window.addEventListener("load", function(){
+            
+            document.getElementById("btn").onclick = function check(){
+                let id = document.getElementById("idNum").value;
+                if(id.length !=10){
+                    console.log("長度不對");
+                    alert("長度不對");
+                    return false; 
+                }
+
+
+
+                let letter = id.charCodeAt(0); //抓A~Z的Binary Character
+                if (letter <65 || letter>90){
+                    console.log("英文字母不對，注意大小寫");
+                    alert("英文字母不對，注意大小寫");
+                }
+
+                let gender = id.charCodeAt(1); //抓性別 1&2 的 ASCII printable characters
+                if(gender != 49 && gender != 50){
+                    console.log("性別不對");
+                    alert("性別不對");
+                }
+
+                let randomNum = id.slice(2);
+                for (let i in randomNum) {
+                    let c = randomNum.charCodeAt(i);
+                    if (c < 48 | c > 57) {
+                        console.log("Fail，數字區出現非數字字元");
+                        return false
+                    }
+                }
+
+                let conver = "ABCDEFGHJKLMNPQRSTUVXYWZIO"
+                let weights = [1, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1]
+
+                id = (conver.indexOf(id[0]) + 10) + id.slice(1);
+
+                checkSum = 0
+                for (let i = 0; i < id.length; i++) {
+                    c = parseInt(id[i])
+                    w = weights[i]
+                    checkSum += c * w
+                }
+
+                verification = checkSum % 10 == 0
+
+                if (verification) {
+                    console.log("Pass");
+                    alert("id 正確");
+                } else {
+                    console.log("Fail，檢核碼錯誤");
+                    alert("id 不正確");
+                }
+
+                return verification
+
+            }
+        });   
+        
+    </script>
+</body>
+</html>

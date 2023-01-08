@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keyword" content="HTML,CSS,Javascript">
+<title>Examples</title>
+
+<style>
+	h2 {
+		color:deeppink;
+	}
+</style>
+
+</head>
+
+<body>
+
+<h2>eval()  </h2>
+<h3>內建函示  eval(字串) </h3>
+<p>將字串中的資料當作敘述來執行</p>
+<script>
+var str = "var a=10; var b=20";
+eval(str);
+document.write( "a : ", a, "<br>");
+</script>
+
+
+<h2>isNaN()</h2>
+<h3>isNaN(資料)</h3>
+<p>是否不是一個有效的數值</p>
+<script>
+document.write( "isNaN('32000') : ",isNaN('32000') ,"<br>"); //32000不是一個數值 這件事是false
+document.write( "isNaN('*#@') : ",isNaN('*#@'), "<br>"); //'*#@' 不是一個數值性資料 這件事是ture
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 36px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const orangeLevel = 2;
+        const kg = 110;
+        let price;
+        let total;
+
+
+        /* 方法一 */
+        /*    switch (orangeLevel) {
+               case 1:
+                   if (kg < 40) {
+                       price = 30
+                       total = price * kg
+                   } else if (kg > 40 && kg < 100) {
+                       price = 25;
+                       total = price * kg
+                   }
+                   else {
+                       price = 20;
+                       total = price * kg
+                   }
+                   break;
+               case 2:
+                   if (kg < 40) {
+                       price = 25
+                       total = price * kg
+                   } else if (kg > 40 && kg < 100) {
+                       price = 20;
+                       total = price * kg
+                   }
+                   else {
+                       price = 15;
+                       total = price * kg
+                   }
+                   break;
+               case 3:
+                   if (kg < 40) {
+                       price = 20
+                       total = price * kg
+                   } else if (kg > 40 && kg < 100) {
+                       price = 15;
+                       total = price * kg
+                   }
+                   else {
+                       price = 10;
+                       total = price * kg
+                   }
+                   break;
+               default:
+                   break;
+           }
+           document.write('小計', total) */
+
+        /* 方法二 */
+        // 30 25 20
+        // 25 20 15
+        // 20 15 10
+        const calc = function (price1, price2, price3) {
+            if (kg <= 40) {
+                total = price1 * kg
+            } else if (kg > 40 && kg <= 100) {
+                total = price2 * kg
+            }
+            else {
+                total = price3 * kg
+            }
+            return total
+        }
+
+        switch (orangeLevel) {
+            case 1:
+                calc(30, 25, 20)
+                break;
+            case 2:
+                calc(25, 20, 15)
+                break;
+            case 3:
+                calc(20, 15, 10)
+                break;
+            default:
+                break;
+        }
+        document.write('小計', total)
+    </script>
+</body>
+
+</html>

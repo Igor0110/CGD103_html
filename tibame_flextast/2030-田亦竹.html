@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css_reset.css">
+    <style>
+        .hot_course {
+        width: 1110px;
+        }
+        .hot_course_titile {
+            width: 1110px;
+            height:33.59px ;
+            font-size: 28px;
+            color: #212529;
+            flex-direction: row;
+            display: flex;
+            justify-content: center;
+        }
+
+       .course-tabs {
+        width: 486px;
+        height: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px 220px 30px 220px;
+        justify-content: space-between;
+        align-items: center;
+       }
+       .course-tab.course-content {
+        font-size: 16px;
+        color: #212529;
+        width: 150px;
+        background-color: #ffff;
+       }
+
+       .course-tab.course-content.course-select {
+        background-color: #14BDCC;
+        width: 150px;
+        height: 38px;
+        color: #ffff;
+        background-color: #14bdcc;
+        text-align: justify;
+       }
+       .course-tab.course-content.unselect {
+        border: 1px solid #212529;
+        height: 38px;
+       }
+       .course-card {
+        width: 255px;s
+        height: 378.43px;        
+       }
+       .course-card-img {
+        width: 255px;
+        height: 143.44px;
+       }
+       .course-card-group {
+        /* background-color: orchid; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+       }
+       .card-1 .course-card-body {
+        width: 225px;
+        height: 102px;
+        padding: 15px 15px 0px;
+       }
+       .course-card-body {
+        width: 225px;
+        height: 134px;
+        padding: 15px 15px 0px;
+
+       }
+
+       div.course-type {
+        font-size: 12px;
+        color: #09ADBF;
+        font-weight: bold;
+       }
+       .course-type .location {
+        color: #00000073;
+       }
+       .course-name {
+        font-size: 18px;
+        color: #212529;
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: bold;
+       }
+       .course-detail{
+        font-size: 12px;
+        color: #00000099;
+       }
+       .card-1 .no-border-footer {
+        width: 225px;
+        height: 73.56px;
+        padding: 0px 15px 15px;s
+       }
+       .no-border-footer {
+        width: 225px;
+        height: 27px;
+        padding: 0px 15px 15px;
+       }
+       .discount-wrapper {
+        width: 168.84px;
+        height: 20px;
+        border: 1px solid #ffa700;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+       }
+       .discount-tag {
+        font-size: 12px;
+        height: 22px;
+        width: fit-content;
+        color: #ffff;
+        background-color: #ffa700;
+        padding: 0px 8px;
+        text-align-last: justify;
+       }
+       .countdown {
+        width: fit-content;
+        color: #00000099;
+        padding: 0px 8px;
+        font-size: 12px;
+        text-align-last: justify;
+       }
+       .price-group {
+        width: 225px;
+        height: 27px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+       }
+        p.price {
+        font-size: 18px;
+        height: 27px;
+        color: #09ADBF;
+        width: fit-content;
+        text-align-last: justify;
+       }
+       .page-view {
+        font-size: 12px;
+        height: 18px;
+        color: #00000099;
+        width: fit-content;
+        text-align-last: justify;
+       }
+       .profile-img {
+        height: 36px;
+        height: 36px;
+       }
+       .profile-group {
+        width: 225px;
+        height: 36px;
+        padding: 8px 15px 0px;
+       }
+
+
+    </style>
+</head>
+<body>
+    <div class="hot_course">
+        <title class="hot_course_titile">精選課程</title>
+        <div class="course-tabs">
+            <div href="" class="course-tab course-content course-select">科技</div>
+            <div href="" class="course-tab course-content unselect">職場</div>
+            <div href="" class="course-tab course-content unselect">語文</div>
+        </div>
+        <div class="course-card-group">
+            <div class="course-card card-1">
+                <div>
+                    <img src=Img/class-1.webp class="course-card-img class-1" alt="深度學習影像辨識YOLO物件偵測">
+                    <div class="course-card-body">
+                        <div class="course-type online">
+                            主題課程/影音課程
+                        </div>
+                        <div class="course-name" title="深度學習影像辨識YOLO物件偵測">
+                            深度學習影像辨識YOLO物件偵測
+                        </div>
+                        <div class="course-detail">
+                            約 1.9 小時
+                        </div>
+                    </div>
+                    <div class="no-border-footer footer-wrapper">
+                        <div class="discount-wrapper">
+                            <div class="discount-tag">
+                                早鳥優惠
+                            </div>
+                            <div class="countdown">
+                                還剩17天8時
+                            </div>
+                        </div>
+                        <div class="price-group">
+                            <p class="price">NT$ 2,3884</p>
+                            <p class="page-view">2,473人瀏覽</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-group">
+                    <img src=Img/teacher-1.webp class="profile-img teacher-1" alt="林聰哲">
+                    <span class="profile-name">林哲聰</span>
+                </div>
+            </div>
+            <div class="course-card card-2">
+                <div>
+                    <img src=Img/class-2.webp class="course-card-img class-2" alt="零基礎python入門與資料科學">
+                    <div class="course-card-body">
+                        <div class="course-type online">
+                            主題課程 / 實體及直播課程
+                            <span class="location">緯育TibaMe台北中心</span>
+                        </div>
+                        <div class="course-name" title="零基礎Python入門與資料科學">
+                            零基礎Python入門與資料科學
+                        </div>
+                        <div class="course-detail">
+                            第二十二期 ∙ 2022/11/01 開課
+                        </div>
+                    </div>
+                    <div class="no-border-footer footer-wrapper">
+                        <div class="price-group">
+                            <p class="price">NT$ 7,920<span>起</span></p>
+                            <p class="page-view">155,843人瀏覽</p>
+                        </div>
+                    </div>                
+                </div>
+                <div class="profile-group">
+                    <img src=Img/teacher-2.webp class="profile-img teacher-2" alt="周凡剛">
+                    <span class="profile-name">周凡剛</span>
+                </div>
+            </div>
+            <div class="course-card card-3">
+                <div>
+                    <img src=Img/class-3.webp class="course-card-img class-3" alt="零基礎python入門與資料科學">
+                    <div class="course-card-body">
+                        <div class="course-type online">
+                            主題課程 / 實體及直播課程
+                            <span class="location">緯育TibaMe台北中心</span>
+                        </div>
+                        <div class="course-name" title="零基礎Python入門與資料科學">
+                            零基礎Python入門與資料科學
+                        </div>
+                        <div class="course-detail">
+                            第二十二期 ∙ 2022/11/01 開課
+                        </div>
+                    </div>
+                    <div class="no-border-footer footer-wrapper">
+                        <div class="price-group">
+                            <p class="price">NT$ 7,920<span>起</span></p>
+                            <p class="page-view">155,843人瀏覽</p>
+                        </div>
+                    </div>                
+                </div>
+                <div class="profile-group">
+                    <img src=Img/teacher-3.webp class="profile-img teacher-3" alt="周凡剛">
+                    <span class="profile-name">周凡剛</span>
+                </div>
+            </div>
+            <div class="course-card card-4">
+                <div>
+                    <img src=Img/class-3.webp class="course-card-img class-4" alt="零基礎python入門與資料科學">
+                    <div class="course-card-body">
+                        <div class="course-type online">
+                            主題課程 / 實體及直播課程
+                            <span class="location">緯育TibaMe台北中心</span>
+                        </div>
+                        <div class="course-name" title="零基礎Python入門與資料科學">
+                            零基礎Python入門與資料科學
+                        </div>
+                        <div class="course-detail">
+                            第二十二期 ∙ 2022/11/01 開課
+                        </div>
+                    </div>
+                    <div class="no-border-footer footer-wrapper">
+                        <div class="price-group">
+                            <p class="price">NT$ 7,920<span>起</span></p>
+                            <p class="page-view">155,843人瀏覽</p>
+                        </div>
+                    </div>                
+                </div>
+                <div class="profile-group">
+                    <img src=Img/teacher-4.webp class="profile-img teacher-4" alt="周凡剛">
+                    <span class="profile-name">周凡剛</span>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+    <br><br>
+    
+    <h2 class="text-cente">精選文章</h2>
+    <div class="text-cente-group">
+        <div class="text-cente-nuber-1">
+            <img src="https://fakeimg.pl/65x110/200" class="text-cente-img img-1">
+            <span href="">培訓案例</span>
+            <span href="">學員心得</span>
+            <div>
+                <a class="text-cent-title">
+                    是學生嗎? 有學習課程半價的優惠福利唷！
+                    <title>是學生嗎? 有學習課程半價的優惠福利唷！</title>
+                </a>
+            </div>
+        </div>
+        <div>
+            <img alt="https://fakeimg.pl/65x110/200" class="text-cente-img img-2">
+            <span href="">技能學習</span>
+            <span href="">學員心得</span>
+            <div>
+                <a>【學員見證】Google Ads利用模擬考題、考題討論，最後直接考試，考過ads證照的機率很高</a>
+            </div>
+        </div>
+        <div>
+            <img alt="3">
+            <span href="">培訓案例</span>
+            <span href="">學員心得</span>
+            <a>【學員見證】Google Ads模擬考確實幫助很多，考試的時候就比較不慌張</a>
+        </div>
+        <div>
+            <img alt="4">
+            <span href="">培訓案例</span>
+            <span href="">學員心得</span>
+            <a>【學員見證】白帽駭客課程有效管理學習進度與狀態，是考證照的人的後盾，讓我感到很安心</a>
+        </div>
+        <div>
+            <img alt="5">
+            <span href="">職場生涯</span>
+            <span href="">自我成長</span>
+            <a>【貓世代職場攻略】社會新鮮人應具備的職場工作態度</a>
+        </div>
+        <div>
+            <img alt="6">
+            <span href="">培訓案例</span>
+            <span href="">學員心得</span>
+            <a>【學員見證】非資訊科學專業到AI學習 擴展自己知識的深度學習</a>
+        </div>
+        <div>
+            <img alt="7">
+            <span href="">培訓案例</span>
+            <span href="">學員心得</span>
+            <a>【學員見證】系統化與多元領域的學習 把專業能力運用在工作實務上</a>
+        </div>
+        <div>
+            <img alt="8">
+            <span href="">培訓案例</span>
+            <span href="">學員心得</span>
+            <a>白帽駭客課程很充實，尤其是可以重複不斷的回看不懂的地方</a>
+        </div>
+    </div>
+</body>
+</html>

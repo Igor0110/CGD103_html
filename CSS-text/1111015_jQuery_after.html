@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>after 插入指定html元素之後 </title>
+    <script src="../web_CGD103/JQuery/js/jquery-3.6.1.js"></script>
+
+</head>
+<body>
+    <ul>
+        <li id="item1">1</li>
+        <li class="item2">2</li>
+        <li>3</li>
+        <li class="item4">4</li>
+        
+    </ul>
+    <script>
+        // 寫法1
+        $(".item2").after('<li>2after寫法1.</li>')
+
+        $(".item4").before('<li>4before</li>')
+
+        // 寫法2
+        $("<li>1After另一寫法</li>").insertAfter("#item1")
+
+        $("<li>4before另一寫法</li>").insertBefore(".item4")
+
+    </script>
+</body>
+</html>

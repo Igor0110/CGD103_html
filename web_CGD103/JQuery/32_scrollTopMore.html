@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.6.1.js"></script>
+	<style>
+        body{
+            background: url(../images/bg100.png);
+        }
+        #skin{
+            height: 2000px;
+        }
+        p{
+            width: 100%;
+            position: fixed;
+            top: 250px;
+            text-align: center;
+            font: 25px Tahoma;
+        }
+        .toBottom{
+            color: red;
+        }
+    </style>
+	<script>
+		$(function () {	
+            $(window).scroll(function(){
+                console.log($(window).scrollTop())   //1047 視口看不到的
+                console.log($(document).height())    //2016整個網頁的長度
+                console.log($(window).innerHeight())  //969視口高度
+
+                let scroll_top = $(window).scrollTop()
+                $('p>span').text(scroll_top)
+
+                if(scroll_top == $(document).height()-$(window).innerHeight()){
+                    $('p>span').addClass("toBottom")
+                }else{
+                    $('p>span').removeClass('toBottom')
+                }
+            })
+		});	
+	</script>
+</head>
+<body>
+    <div id="skin">
+        <p>scrollTop: <span>0</span></p>
+    </div>
+</body>
+
+</html>

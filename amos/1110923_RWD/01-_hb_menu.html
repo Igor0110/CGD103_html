@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #ccc;
+            position: relative;
+            position: sticky;
+            top: 0;
+            margin-bottom: 20px;
+        }
+        .logo img{
+            vertical-align: top;
+        }
+
+        .main-nav a{
+            display: block;
+            padding: 10px;
+        }
+        #menu-switch{
+            display: none;
+        }
+
+        @media screen and (max-width:767px) {
+            .main-nav{
+                display: none;
+                position: absolute;
+                background-color: #fa0;
+                width: 100%;
+                left: 0;
+                top: 100%;
+
+            }
+            #menu-switch:checked + .header .main-nav{
+                display: block;
+            }
+            .hb{
+                width: 40px;
+                height: 40px;
+                background-color: #666;
+            }
+            .hb span{
+                display: block;
+                width: 32px;
+                height: 2px;
+                margin: 8px auto 0;
+                background-color: #000;
+            }
+        }
+        @media screen and (min-width:768px) {
+            .hb{display: none;}
+            .main-nav{
+                display: flex;
+                /* position: relative; */
+                width: fit-content;
+                /* background-color: transparent; */
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-switch">
+    <div class="header">
+        <!-- logo -->
+        <div class="logo">
+            <img src="https://fakeimg.pl/80x40/200">
+        </div>
+
+        <!-- 漢堡 -->
+
+
+        <label for="menu-switch" class="hb">  
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        
+        <!-- 選單 -->
+        <nav class="main-nav">
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </div>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+</body>
+</html>

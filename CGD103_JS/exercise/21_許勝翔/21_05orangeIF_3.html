@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>HW05</h2>
+    <script>
+        var level = "2";
+        var weight = 120;
+        var price1 = 30;
+        var price2 = 25;
+        var price3 = 20;
+        var price4 = 15;
+        var price5 = 10;
+
+        switch(level){
+            case "1":
+                if(weight <= 40){
+                    Total = price1 * weight
+                }
+                else if(weight <= 100){
+                    Total = price2 * weight
+                }
+                else if(weight > 100){
+                    Total = price3 * weight
+                };
+                break;
+            case "2":
+                if(weight < 40){
+                    Total = price2 * weight
+                }
+                if(weight <= 100){
+                    Total = price3 * weight
+                }
+                if(weight > 100){
+                    Total = price4 * weight
+                };
+                break;
+            case "3":
+                if(weight <= 40){
+                    Total = price3 * weight
+                }
+                else if(weight <= 100){
+                    Total = price4 * weight
+                }
+                else if(weight > 100){
+                    Total = price5 * weight
+                };
+                break;
+            default:
+                Total = "none"
+
+        document.write("Total:", Total)
+        }
+    </script>
+</body>
+</html>

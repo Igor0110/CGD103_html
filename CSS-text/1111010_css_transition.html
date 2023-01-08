@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bottom{
+            color: #f1f1f1;
+            text-align: center;
+            background-color: brown;
+            width: 100px;
+            height: 100px;
+            transition: width 1s,height 1s;
+
+        }
+        /* 如果要雙向動畫都相同，只要在原始狀態加入transition屬性，在觸發狀態更改要轉換的屬性參數即可。 */
+        .bottom:hover{
+            background-color: chocolate;
+            width: 150px;
+            height: 150px;
+            transition: width 1s,height 3s;
+        }
+
+        /* 如果雙向動畫要不同，可以分別在觸發狀態加上觸發時的transition屬性，在原始狀態加上返回時的的transition屬性，控制不同的效果 */
+    </style>
+</head>
+<body>
+    <input type="bottom" class="bottom">
+
+</body>
+</html>

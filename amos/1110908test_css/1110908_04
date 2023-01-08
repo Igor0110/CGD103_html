@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .L1 {
+            padding: 40px;
+            border: 10px solid pink;
+        }
+        .L2 {
+            padding: 40px;
+            border: 10px solid blue;
+        }
+        .L3 {
+            padding: 10px;
+            border: 10px solid red;
+        }
+
+        .L1 > div > div {
+            border-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="L1">
+        <div class="L2">
+            <div class="L3">div</div>
+        </div>
+    </div>
+</body>
+</html>

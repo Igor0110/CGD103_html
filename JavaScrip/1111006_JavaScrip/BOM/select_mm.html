@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+</head>
+<body>
+入會月份
+<select id="mm">
+</select>
+
+<script>
+    function $id(id){
+        return document.getElementById(id);
+    }
+    window.addEventListener("load",function(){
+        let mm = $id("mm");
+        let option, text, value;
+        for(let i = 1; i<=12; i++ ) {
+                text= i+"月";
+                value =i ;
+                option = new Option(text,value);  //Option --類別名，第一個字大寫。
+                mm.add(option)
+        }
+        mm.selectedIndex = new Date(),getMonth();
+    })
+    //options 清單中所有option物件的集合
+    //selectedIndex 被選到的項目之索引值
+    //add(option物件,index) 將option物件加到select物件中,索引值為index的
+</script> 
+</body>
+</html>

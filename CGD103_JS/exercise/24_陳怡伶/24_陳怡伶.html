@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24_陳怡伶</title>
+    <style>
+        h2{color: darkorange;}
+        p{font-weight: bolder;color: darkolivegreen;}
+    </style>
+</head>
+<body>
+    <h2> 01 orange </h2>
+    <script>
+        var orange_weight = 2
+        var price = orange_weight*22
+        document.write("price: ",price,"<br>");
+    </script>
+
+
+    <h2> 02 orange </h2>
+    <p>8000 seconds = </p>
+    <script>
+        var second = 8000
+        var minutes = second/60
+        var hours = second/60/60
+        var seconds = second%60
+        document.write("hours:",parseInt(hours),"<br>");
+        document.write("minutes:",parseInt(minutes),"<br>");
+        document.write("seonds:",parseInt(seconds),"<br>");
+    </script>
+    
+
+    <h2> 03 orangeIF 1 </h2>
+    <p> 橘子一斤100元</p>
+    <script>
+        var price = 100;
+        var orange_weight = 9;
+        var total = orange_weight*price;
+
+        if(total>500){document.write("price:",total*0.9,"<br>");}
+        else{document.write( "price:",total,"<br>");} 
+    </script>
+
+
+<h2> 04 orangeIF 2 </h2>
+<p> 橘子一斤100元</p>
+<script>
+    var price = 100
+    var orange_weight = 6
+    var total = orange_weight*price
+    
+    if(total>1000){document.write("price:",total*0.7,"<br>");
+    }
+	else if(total>500){document.write("price:",total*0.9,"<br>");
+    }
+	else{document.write( "price:",total,"<br>");
+    } 
+  
+   // var orange_weight = 13 14 會壞掉??? 為什麼??? 
+</script>
+
+
+<h2> 05 orangeIF 3 </h2>
+<script>
+	var level = "2";
+	var weight = "60"
+	var price;
+	switch(level){
+		case"1" :
+			if(weight>100){price = weight*20
+		}
+			else if(weight>40){price = weight*25
+		}
+			else if(weight<40){price = weight*30
+		}
+		break;
+		case"2" :
+		    if(weight>100){price = weight*15
+		}
+			else if(weight>40){price = weight*20
+		}
+			else if(weight<40){price = weight*25
+		}
+		break;
+		case"3" : 
+		     if(weight>100){price = weight*10
+		}
+			else if(weight>40){price = weight*15
+		}
+			else if(weight<40){price = weight*20
+		}
+		break;
+	}
+	document.write( "價格: ", price, "<br>");
+</script>
+
+
+</body>
+</html>

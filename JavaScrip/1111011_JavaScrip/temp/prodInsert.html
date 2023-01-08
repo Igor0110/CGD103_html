@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style type="text/css">
+			caption{
+				text-align: center;
+			}
+			table{
+				text-align: center;
+
+			}
+		</style>
+	</head>
+	<body>
+		<form action="prodInsert.php" method="post"  enctype="multipart/form-data">
+			<caption>新增商品</caption>
+			<table align="center" border="1" cellspacing="0">
+				<tr>
+					<th>書名</th>
+					<td><input type="text" name="pname"></td>
+
+				</tr>
+				<tr>
+					<th>價格</th>
+					<td><input type="text" name="price"></td>
+
+				</tr>
+				<tr>
+					<th>作者</th>
+					<td><input type="text" name="author"></td>
+
+				</tr>
+				<tr>
+					<th>頁數</th>
+					<td><input type="text" name="pages"></td>
+
+				</tr>
+				<tr>
+					<th>商品圖</th>
+					<td>上傳檔案:<input type="file" name="upFile" id="upFile">
+						<label for="upFile">
+						<img id="myImg"  alt="" width="50">
+						</label>
+
+					</td>
+
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" name="submit"></td>
+				</tr>
+			</table>
+		</form>
+		
+
+<script>
+	window.addEventListener("load",function(){
+		document.getElementById("upFile").onchange = function(e){
+			let filePath = e.target.value;
+
+			console.log(filePath);
+			//找出路徑
+			let slash = filePath.lastIndexOf("\\");
+			let path = filePath.substing(0, slash);
+			
+			//找出全部的檔名
+			let fileStr = filePath.substr(slash+1);
+			
+			//取出主檔名,找出副檔名
+			let filName ,fileExt;
+			let dot = fileStr.lastIndexOf(".");
+			fileName = fileStr.substring(0 , dot);  //sara.smile
+			fileExt = fileStr.substr(dot+1);
+			//副檔名必須是 bmp png gif ico 其中之一,檔案格式才被接受
+			let allowed = ["bmp","png","gif","ico"];
+			if(allowed.indexOf(fileExt) == -1){  //找不到
+				alert(  `${fileStr}檔案格式不合`);
+
+			}else{
+				alert( `${fileStr}檔案格式OK`)
+			}
+		}
+
+	})
+</script>		 
+	</body>
+	</html>	

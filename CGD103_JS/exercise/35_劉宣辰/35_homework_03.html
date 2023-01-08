@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h4{ line-height: 0px; }
+    p{  }
+</style>
+<body>
+    <h4>作業13：Math﹐陣列﹐迴圈練習</h4>
+    <p>寫一段 javascript 程式，在網頁上隨機產生 6 個不重複的大樂透數字（介於1~49之間）</p>
+    <script>
+        var number = [];
+        var n;
+        for (var i=0; i<6; i++){
+            n = parseInt(Math.random()*49)+1; //
+            if (number.indexOf(n) === -1){ //有效 的樂透值
+                // 回傳給定元素於陣列中第一個被找到之索引，若不存在於陣列中則回傳-1
+                number.push(n);
+                document.write(number[i], "<br>");
+            }else{ //此樂透球無效, 此次不列入計算
+                i--;
+            }
+
+        }
+
+    </script>
+    
+    <h4>作業13：Math﹐陣列﹐迴圈練習</h4>
+    <script>
+        // function getRandom(x){
+        //     return Math.floor(Math.random()*(x+1));
+        // }; 
+        
+        
+    </script>
+    
+    <h4>作業13：Math﹐陣列﹐迴圈練習</h4>
+    <!-- <script>
+        var number= [];
+        var n;
+
+        while (number.length <6){
+            n = Math.floor(Math.random()*50);
+            if(number.indexOf(n) === -1){
+                number.push(n)
+            }
+        }
+        document.write(number[length], "<br>");
+    </script> -->
+</body>
+</html>

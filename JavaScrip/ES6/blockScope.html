@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>constant</title>
+</head>
+
+<body>
+<h2> </h2>  
+<script type="text/javascript">
+//var 有hoist的現象  
+document.write(a , "<br>");
+var a = 10;
+
+//let 没有hoist的現象
+// document.write(b,"<br>");
+let b = 10;
+
+//var 可重複宣告 
+
+
+//let 不可重複宣告
+
+
+//var 没有區塊性的作用範圍
+
+// //------------for句型中的var作用範圍
+// for(var i=1; i<=5; i++){  //for中的var宣告方式没有區塊作用域的特性
+// 	document.write('i : ' , i ,"<br>"); 
+// }
+// document.write('i : ' , i ,"<hr>"); 
+
+// //ES6------------for句型中的let宣告方式有區塊作用域的特性
+for(let j=1; j<=5; j++){
+	document.write('j : ' , j ,"<br>"); 
+}
+// document.write('j : ' , j ,"<br>"); //此行會error
+
+// {
+// 	//?????
+// }
+
+
+
+</script>
+
+</body>
+</html>

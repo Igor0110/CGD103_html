@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<style>
+	h2{
+		color:deeppink;
+	}
+</style>
+</head>
+<body>
+
+<h2>句型</h2>
+<script>
+for(let i=1; i<=3; i++){  //i:0
+	document.write( "I love JavaScript~<br>");
+}
+
+</script> 
+
+ 
+<h2>練習一:印出  1、2、3、4、5、6、7、8、9、10</h2>
+<script>
+for(let i=1; i<=10; i++){//i:2
+	if(i<10){
+		document.write( i, "、");
+	}else{
+		document.write( i);
+	}
+}
+</script> 
+
+<h2>練習一:印出  1、2、3、4、5、6、7、8、9、10-----二</h2>
+<script>
+for(var i=1; i<=9; i++){//i:10
+	document.write( i, "、");
+}
+document.write( i, "<br>");
+</script> 
+
+
+<h2>練習二:請問: 1加到10的總和為多少? </h2>
+<script>
+var sum = 0;  //sum : 0+1+2+3+4+5
+for(var i=1; i<=10; i++){  //i:3
+	//sum = sum + i;
+	sum += i;
+}
+document.write( "總計 : ", sum, "<br>");
+</script>
+
+<h2>練習三:請印出1到50間3的倍數及其總和 </h2>
+<script>
+var sum = 0;
+for(var i=1; i<=50;i++){
+	if(i%3==0){ //3的倍數才印出, 並加入總計
+		document.write( i, "<br>");
+		sum += i;		
+	}
+}
+document.write( "總計 : ", sum, "<br>");
+</script>
+
+
+<h2>練習三:請印出1到50間3的倍數及其總和-----二 </h2>
+<script>
+var sum = 0;
+for(var i=3; i<=50; i+=3){  //i:6
+	document.write( i, "<br>");
+	sum += i;		
+}
+document.write( "總計 : ", sum, "<br>");
+</script>
+<!-- -->
+
+</body>
+</html>

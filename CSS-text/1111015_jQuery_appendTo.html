@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appendTo prependTo </title>
+    <script src="../web_CGD103/JQuery/js/jquery-3.6.1.js"></script>
+
+</head>
+<body>
+    <ul>
+        <li id="item1">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="item4">4</li>
+        
+    </ul>
+    <script>
+        $('#item1').appendTo("ul");  //移到指定目標的最後
+        $('.item4').prependTo("ul");  //移到指定目標的前面
+
+
+    </script>
+</body>
+</html>

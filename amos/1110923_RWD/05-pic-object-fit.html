@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pic{
+            margin: 50px;
+            width: 200px;
+            height: 200px;
+            border: 10px solid red;
+        }
+        .pic img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* object-fit:cover撲滿不會留下空白
+            object-fit:cortain 圖片不夠，會留下空白 */
+            object-position: top right;
+        }
+        /* object-position 後面可以設定左上角 top left
+        置中 center center */
+
+    </style>
+</head>
+<body>
+    <div class="pic">
+        <img src="https://picsum.photos/300/200/?random=11">
+    </div>    
+    <div class="pic">
+        <img src="https://picsum.photos/200/300/?random=10">
+    </div>
+
+    <div class="pic2">
+        <img src="https://picsum.photos/300/200/?random=11">
+    </div>    
+    <div class="pic2">
+        <img src="https://picsum.photos/200/300/?random=10">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var second = 8000;
+      var hh = Math.floor(8000 / 3600);
+      var mm = Math.floor((second - hh * 3600) / 60);
+      var ss = second % 60;
+      if (hh < 10) {
+        hh = "0" + hh;
+      }
+      if (mm < 10) {
+        mm = "0" + mm;
+      }
+      if (ss < 10) {
+        ss = "0" + ss;
+      }
+      var time = hh + ":" + mm + ":" + ss;
+      document.write("時間：" + time + "<br>");
+    </script>
+  </body>
+</html>

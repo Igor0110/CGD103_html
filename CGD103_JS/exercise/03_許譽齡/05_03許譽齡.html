@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>設定變數存放所購買的等級及公斤數，並算出小計</h2>
+    <script>
+        var quality = "2";
+        var quantity = 101;
+        var price;
+        switch(quality){
+            case "1":
+            price = 30;
+                if( quantity <= 40){
+                    price = 30;
+                    price = price * quantity;
+                }else if( quantity <= 100){
+                    price = 25;
+                    price = price * quantity;
+                }else if( quantity > 100){
+                    price = 20;
+                    price = price * quantity;
+                }
+                break;
+            case "2":
+                if(quantity <= 40){
+                    price = 25;
+                    price = price * quantity;
+                }else if( quantity <= 100){
+                    price = 20;
+                    price = price * quantity;
+                }else if( quantity > 100){
+                    price = 15;
+                    price = price * quantity;
+                }
+                break;
+            case "3":
+                if( quantity <=40){
+                    price = 20;
+                    price = price * quantity;
+                }else if( quantity <= 100){
+                    price = 15;
+                    price = price * quantity;
+                }else if( quantity > 100){
+                    price = 10;
+                    price = price * quantity;
+                }
+                break;
+        }
+
+        document.write("小計:", price, "<br>");
+
+    </script>
+</body>
+</html>

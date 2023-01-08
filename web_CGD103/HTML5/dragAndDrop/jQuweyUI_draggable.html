@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop</title>
+    <script src="./new.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#drag').draggable({
+                // axis:'x',
+                cursor: 'crosshair',
+                revert: true,
+
+                //限制拖曳範圍
+                // containment:'parent'  //灰色內
+                // containment:'window'  //視口內
+                containment:'document'  //document內
+                
+                
+
+
+            })
+        })
+    </script>
+    <style>
+        .wrap{
+            width: 300px;
+            height: 300px;
+            background-color: #ccc;
+        }
+        #drag{
+            background: maroon;
+            color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <span id="drag">Drag me</span>
+    </div>
+
+
+</body>
+</html>

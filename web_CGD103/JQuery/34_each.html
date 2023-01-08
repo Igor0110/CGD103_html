@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.6.1.js"></script>
+	<style>
+        *{
+            margin: 0;
+        }
+        .area{
+            height: 800px;
+            display: none;
+        }
+        .area p{
+            font: bold 200px calibri;
+            text-align: center;
+            line-height: 500px;
+            
+        }
+        .area:nth-child(1){background:#721121 ;}
+        .area:nth-child(2){background:#A5402D ;}
+        .area:nth-child(3){background:#F15156 ;}
+        .area:nth-child(4){background:#FFC07F ;}
+        .area:nth-child(5){background:#FFCF99 ;}
+
+    </style>
+	<script>
+		$(function () {	
+            $('#theButton').click(function(){
+
+                // 做法1 有輸入就串接，不會提醒有欄為空白
+                // let theText = ''
+                // $(':text').each(function(){
+                //     theText += $(this).val() + ' '
+                // })
+                // $('#feedback').text(theText)
+                
+                //作法2
+                //判斷是否每個欄位都有輸入
+                let theText = ''
+                let faild = false   //假設每一個人有輸入
+                $(':text').each(function(){
+                    if($(this).val() == ''){
+                        faild = true
+                    }
+                })
+                if(faild == true){
+                    alert('File out all fields.')
+                }else{
+                    alert('Thanks for filling out all fields')
+
+                  $(':text').each(function(){
+                    theText += $(this).val()+ ' '
+                  })
+                  $('#feedbock').text(theText)
+                }
+            })
+		});	
+
+        // $.each(陣列,function(){})
+        // $(陣列).each(function(){})
+
+        // $.each(物件,function(){})
+        // $(物件).each(function(){})
+
+
+	</script>
+</head>
+<body>
+    <p>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <button id="theButton">Combine</button>
+    </p>
+    <div id="feedback">
+
+    </div>
+</body>
+
+</html>

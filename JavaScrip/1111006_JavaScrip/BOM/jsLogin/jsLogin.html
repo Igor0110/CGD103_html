@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>董董購物網</title>
+<link rel="stylesheet" type="text/css" href="jsLogin.css">
+</head>
+
+<body>
+<!------ 燈箱：登入 ------>
+<div id="lightBox" style="display:none">
+    <table border="1" align="center" cellspacing="0" id="tableLogin">
+      <tr><td>帳號</td><td><input type="text" name="memId" id="memId"></td></tr>
+      <tr><td>密碼</td><td><input type="password" name="memPsw" id="memPsw"></td></tr>
+    <tr><td colspan="2" align="center">
+          <input type="button" id="btnLogin" value="登入">
+          <input type="button" id="btnCancel" value="取消">
+      </td></tr>
+  </table>
+</div>
+<!------ 燈箱：登入 ------>
+
+<!-- wrapper -->
+<div id="wrapper">
+  <!------ 登入bar ------>
+  <img src="大頭照.jpg">
+  <div id="bar" style="position: absolute;top:0;right: 20px">
+  <span id="memName">&nbsp;</span>
+  <span id="spanLogin">登入</span>
+  <!------ 登入bar ------>
+</div>
+
+<div id="content">
+<center><h1>這是首頁</h1></center>
+</div>
+
+<div id="footer"></div>
+
+</div>
+<script>
+
+
+let memId = document.querySelector("#memId");
+let memPsw = document.querySelector("#memPsw");
+
+var memName =document.querySelector("#memName");
+var spanLogin =document.querySelector("#spanLogin");
+
+function showLightBox(loog){ //--------
+let spanLogin_1 = document.getElementById("spanLogin").textContent;
+console.log("spanLogin_01 "+spanLogin_1);
+let spanLogin_2 = document.getElementById("spanLogin").innerText;
+console.log("spanLogin_02 "+spanLogin_2);
+let spanLogin_3 = document.getElementById("spanLogin").innerHTML;
+console.log("spanLogin_03 "+spanLogin_3);
+let spanLogin_4 = document.querySelector("#spanLogin").textContent;
+console.log("spanLogin_04 "+spanLogin_4);
+let spanLogin_5 = document.querySelector("#spanLogin").innerText;
+console.log("spanLogin_05 "+spanLogin_5);
+let spanLogin_6 = document.querySelector("#spanLogin").innerHTML;
+console.log("spanLogin_06 "+spanLogin_6);
+
+  //let spanLogin = loog.target;console.log("spanLogin");
+  //檢查登入bar面版上 spanLogin 的字是登入或登出
+  if(spanLogin_1 == "登入"){
+    //如果是登入，就顯示登入用的燈箱(lighBox)
+    var lightBox =document.querySelector("#lightBox");
+    lightBox.style.display ="block";
+  }else{
+    //如果是登出
+    //將登入bar面版上，登入者資料清空
+
+    memName.textContent = "";
+    //spanLogin的字改成登入
+    spanLogin.textContent = "登入";
+    
+    
+  }
+}//showLoginForm
+
+function checkLoginData(){
+  //帳號必須是 Sara , 密碼是 111
+
+  console.log(memPsw);
+  console.log(memId);
+  
+  if ((memId.value == "Sara" ) && (memPsw.value == "111")){
+//正確//登入成功 ==
+    //登入bar面版上 memName 的字改成會員匿稱(董董)
+    memName.textContent = "董董";
+    //登入bar面版上 spanLogin 的字改成登出
+    spanLogin.textContent = "登出";
+    //將登入表單上的資料清空，並隱藏起來
+    cancelLogin();
+  }else {
+ //帳密錯誤
+    //顯示 帳密錯誤 訊息
+    window.alert("帳密錯誤");
+  } 
+ }
+
+function cancelLogin(){
+  //將登入表單上的資料清空，並將燈箱隱藏起來
+  memId.value ="";
+  memPsw.value= "";
+  var lightBox =document.querySelector("#lightBox");
+  lightBox.style.display ="none";
+}
+
+function init(){
+  //===設定spanLogin.onclick 事件處理程序是 showLightBox
+  var logStatus = document.getElementById('spanLogin');
+  logStatus.addEventListener("click", showLightBox);
+
+  //===設定btnLogin.onclick 事件處理程序是 checkLoginData
+  var logStatus = document.getElementById('btnLogin');
+  logStatus.addEventListener("click", checkLoginData);
+
+  //===設定btnCancel.onclick 事件處理程序是 cancelLogin
+  var logStatus = document.getElementById('btnCancel');
+  logStatus.addEventListener("click", cancelLogin);
+}; //window.onload
+
+window.addEventListener("load", init, false);
+</script>
+</body>
+</html>

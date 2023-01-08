@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+</head>
+<body>
+<script type="text/javascript">
+//陣列解構賦值
+var arr = [11, 22, 33];
+var a = arr[0]; //舊式要一一取出
+var [a, b, c, d] = arr; //陣列解構賦值
+document.write( "a: " , a , "<br>");
+document.write( "b: " , b , "<br>");
+document.write( "c: " , c , "<br>");
+document.write( "d: " , d , "<br>");
+document.write(  "<hr>");
+//------------陣列解構賦值搭配預設值
+var arr = [11, 22, 33];
+var a = arr[0];
+var [a, b, c, d=0] = arr;
+document.write( "a: " , a , "<br>");
+document.write( "b: " , b , "<br>");
+document.write( "c: " , c , "<br>");
+document.write( "d: " , d , "<br>");
+document.write(  "<hr>");
+//------------陣列解構賦值rest parameter
+var arr = [11, 22, 33, 44 ,55, 66, 77];
+
+var [a, b, ...arr2] = arr;
+document.write( "a: " , a , "<br>");
+document.write( "b: " , b , "<br>");
+document.write( "arr2: " , arr2 , "<br>");
+document.write(  "<hr>");
+
+
+//------------陣列展開後傳給參數
+function sum( a, b, c){
+	return a+b+c;
+}
+
+var numbers = [11,22,33];
+document.write("1---total = ", sum( numbers[0], numbers[1], numbers[2]) , "<br>"); //以前的做法
+document.write("2---total = ", sum( ...numbers) , "<br>"); //ES6可以這樣寫
+document.write(  "<hr>");
+//------------物件解構賦值
+var emp = {empno : "7389",
+           ename : "King",
+           salary: 88888};
+var empno = emp.empno;
+//document.write( "empno: " , emp.empno , "<br>");  
+//?????  
+({empno, ename, salary, deptno=0} = emp);
+document.write( "empno: " , empno , "<br>"); 
+document.write( "ename: " , ename , "<br>"); 
+document.write( "salary: " , salary , "<br>"); 
+document.write( "deptno: " , deptno , "<br>"); 
+</script>    
+</body>
+</html>

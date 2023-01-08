@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var lowType = "1";
+        var weight = 40;
+        var total;
+
+    
+        switch(lowType){
+            case "1":
+                if(weight>=100){
+                    total = weight*20;
+                }else if (weight>=40){
+                    total = weight*25;
+                }else{
+                    total = weight*30;
+                }
+                break;
+
+            case "2":
+            if(weight>=100){
+                    total = weight*15;
+                }else if (weight>=40){
+                    total = weight*20;
+                }else{
+                    total = weight*25;
+                }
+                break;
+            case "3":
+            if(weight>=100){
+                    total = weight*10;
+                }else if (weight>=40){
+                    total = weight*15;
+                }else{
+                    total = weight*20;
+                }
+                break;
+            }
+        document.write( "總共 : ", total, "<br>");
+    </script>  
+</body>
+</html>

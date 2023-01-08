@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+
+</head>
+<body>
+
+<div>首頁 >> <span id="curPos">=====</span></div>
+<p>用javascrip設定屬性 </p>
+<br><br>
+<!-- //value使用者打得值 -->
+搜尋<input type="text" name="sData" value=""  style=""><input type="button" value="查詢"><br>
+搜尋<input type="text" name="sData" value="" style=""><input type="button" value="查詢"><br>
+
+<script type="text/javascript">
+//找到頁面中的元素 curPos
+let curPos = document.getElementById("curPos");
+// curPos.innerText = "<i>會員專區</i>";
+curPos.innerHTML = "<b><i>會員專區</i></b>";
+// curPos.value = "<b><i>會員專區</i></b>";  //如果沒有宣告 電腦幫忙宣告
+
+// 改變HTML元素物件外觀的樣式
+curPos.style.color = "deeppink";
+curPos.style.borderBottomStyle = "dotted";
+// 跟css不一樣， 第一個英文大寫 Bottom Style
+
+//------------------------------------------
+//找到頁面中的元素 sData
+let objs = document.getElementsByName("sData");
+objs[0].placeholder = "請輸入搜尋關鍵字";
+objs[1].value = "JS大絕招";
+// value 直接輸入值
+
+
+//改變外觀
+objs[0].style.borderStyle = "none none dotted none";
+// objs[0].style.display ="inline-block"  改變display 
+let obj = document.getElementsByName("sData")[0];
+obj.value = "PHP Bible"
+
+
+// placeholder 跟 value 是value勝出
+</script>    
+
+<h2>Element物件_3 getElementById</h2>
+<div id="test">
+    aaa
+    <script>
+        var a = 10;
+
+    </script>
+    bbb
+</div>
+<script>
+    let testObj = document.getElementById("test");
+    console.log(testObj.innerText);
+    console.log("------------------");
+    console.log(testObj.textContent);
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var regExp = /^[A-Z|a-z][12][0-9]{8}$/;  //new RepExp("^A")
+        // var regExp = /^[A-Z][12][0-9]/;  //new RepExp("^A")
+
+        var idNo = "h1277868774";
+        if(regExp.test(idNo)){
+            document.write("正確<br>");
+        }else{
+            document.write("錯誤<br>")
+        }
+    </script>
+</body>
+</html>

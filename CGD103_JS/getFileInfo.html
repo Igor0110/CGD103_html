@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+
+</head>
+<body>
+	<h2>打包進陣列</h2>
+<script>
+function getFileInfo(fileStr){ //取出主檔名, 副檔名
+	//檔案全名 "sara.smile.pptx";
+	//取出主檔名, 副檔名;
+	let fileName, fileExt;
+	let dot = fileStr.lastIndexOf(".");
+	fileName = fileStr.substring(0, dot);//sara.smile
+	fileExt = fileStr.substr(dot+1); 
+	let file = [fileName, fileExt];
+	return file;
+}
+
+var fileStr = "sara.smile.pptx";
+var file = getFileInfo(fileStr);
+
+document.write("fileName : ", file[0], "<br>");
+document.write("fileExt : ", file[1], "<br>");
+</script>    
+
+	<h2>打包進物件</h2>
+<script>
+function getFileInfo_obj(fileStr){ //取出主檔名, 副檔名
+	//檔案全名 "sara.docx";
+	//取出主檔名, 副檔名;
+	let fileName, fileExt;
+	let dot = fileStr.lastIndexOf(".");
+	fileName = fileStr.substring(0, dot);//sara.smile
+	fileExt = fileStr.substr(dot+1); 
+	let file = {fileName, fileExt};
+	return file;
+}
+
+var fileStr = "sara.docx";
+var file = getFileInfo_obj(fileStr);
+
+document.write("fileName : ", file.fileName, "<br>");
+document.write("fileExt : ", file.fileExt, "<br>");
+</script> 
+</body>
+</html>

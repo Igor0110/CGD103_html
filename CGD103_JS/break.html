@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+
+</head>
+<body>
+<h2>break	</h2>
+<script>
+	var sum = 0;
+	for(var i=1; i<=1000; i++){
+		sum += i;
+		if(sum > 1000){
+			document.write( "1+2+...+", i, "=", sum, "大於1000<br>");
+			break;
+		}
+	}
+</script>   
+
+<h2>continue	</h2>
+<script>
+	var sum = 0;
+	for(var i=1; i<=50; i++){
+		if(i%3 != 0){
+			continue;
+		}
+		document.write( i, "<br>");
+		sum += i;
+	}
+	document.write( "總計 : ", sum, "<br>");
+</script>  
+</body>
+</html>

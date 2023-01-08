@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+</head>
+<body>
+<script>
+var msg = "This is a book";
+//IIFE
+(function (msg="Hi"){ //避免汚染全域變數, 且用完即丟
+	msg = msg +"~~~";
+	document.write( `${msg}<br>` );
+})();
+
+msg = msg + "~~~";
+
+(function (msg="Hi"){
+	msg = msg +"~~~";
+	document.write( `${msg}<br>` );
+})("Hello~");
+
+document.write( `outside : ${msg}<br>` );
+// msg = msg + "~~~";
+// document.write( `${msg}<br>` );
+</script>    
+</body>
+</html>

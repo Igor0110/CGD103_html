@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.6.1.js"></script>
+	<style>
+		.menu{
+			list-style: none; 
+			padding: inline start 20px; ;
+		}
+		.bold{
+			font: bold 25px  calibri;
+		}
+	</style>
+	<script>
+		$(function () {	
+			// $(`.name li:nth-child(1)`).append(`(First)`) //append增加的意思
+			// $(`.name li:eq(0)`).append(`(First)`)
+			// $(`.name li:first`).append(`(First)`)
+			$(`.name`).find('li').first().append(`(First)`)
+			$(`.name`).find('li').last().append(`(Last)`)
+// ====================
+			// $(`.menu`).find('li').first().addClass(bold)
+			// $(`.menu`).find('li').first().addClass('bold').nextAll().hide()
+			// $(`.menu`).find('li').first().addClass('bold').click(function(){}).nextAll().hide()
+			$(`.menu`).find('li').first().addClass('bold').click(function(){
+				// $(this).nextAll().show
+				$(this).nextAll().toggle()
+
+			}).nextAll().hide()
+
+		});			
+	</script>
+</head>
+
+<body>
+	<ul class="name">
+		<li>Alex</li>
+		<li>Brian</li>
+		<li>Carl</li>
+		<li>Dale</li>
+		<li>Eric</li>
+	</ul>
+	<hr>
+
+	<ul class="menu">
+		<li><a href="#">User</a></li>
+		<li>Setting</li>
+		<li>Log out</li>
+		<li>Delete Account</li>
+		<li>Something else</li>
+		<li>Do nothing</li>
+	</ul>
+</body>
+
+</html>

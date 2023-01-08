@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keyword" content="HTML,CSS,Javascript">
+<title>Examples</title>
+
+<style>
+	h2 {
+		color:deeppink;
+	}
+</style>
+
+</head>
+
+<body>
+
+<h2>没有參數也没有傳回值</h2>
+<script>
+function sayHello(){
+	document.write(  "Hello~<br>");
+	return;
+}
+
+sayHello(); 
+</script>
+
+
+<h2>有參數也没有傳回值</h2>
+<script>
+function sayHelloToSomeone(myName){//---------------區域變數myName : 鵬宇
+	document.write( myName, ", Hello~<br>"); //---------------
+	//return; //可以省略
+}
+
+sayHelloToSomeone("鵬宇");
+//document.write( myName,  "<br>");//error
+
+</script>
+
+<h2>有參數, 有傳回值</h2>
+<script>
+
+function sum(a, b){//--------區域 a:10, b:20 
+	var total = 0  //區域 total:0
+	total = a + b; //區域 total:30
+	return total;
+}
+
+function sum(a, b, c){//--------區域 a:10, b:20 
+	var total = 0  //區域 total:0
+	total = a + b + c; //區域 total:30
+	return total;
+}
+
+document.write( "10+20=", sum(10, 20), "<br>"); //NaN
+document.write( "10+20+30=", sum(10, 20, 30), "<br>");
+</script>
+
+<h2>arguments</h2>
+<script>
+function sum(a, b){//--------區域 a:10, b:20 
+	var total = 0  //區域 total:0
+	total = a + b; //區域 total:30
+	return total;
+}
+
+function sum(a, b, c){//arguments可以接收到所有的引數資料, arguments不是陣列
+//-------- arguments物件: [10, 20, 30], arguments[0]-->10, arguments[1]-->20, arguments[2]-->30,arguments.length:3
+
+	var total = 0  //區域 total:0
+	for(let i=0; i<arguments.length; i++){
+		total += arguments[i];
+	} 
+	return total;
+}
+
+document.write( "10+20=", sum(10, 20), "<br>"); //引數 :10, 20//------------
+document.write( "10+20+30=", sum(10, 20, 30), "<br>");//引數 :10, 20,30  
+</script>
+
+
+<h2>參數給預設值</h2>
+<script>
+function showMsg(message){  //message:undefined //------------
+	//document.write( message, "<br>");
+
+	if(message === undefined){
+		message = "Hello~";
+	}
+	document.write( message, "<br>");
+}
+
+showMsg("祝大家早日康復~"); 
+showMsg();
+</script>
+
+<h2>參數給預設值=============2</h2>
+<script>
+function showMsg(message){  //message:undefined 
+	message = message || "Hello~";//shortcut寫法
+	document.write( message, "<br>");
+}
+
+showMsg("祝大家早日康復~"); 
+showMsg();
+</script>
+
+<h2>參數給預設值=============3</h2>
+<script>
+function showMsg(message){  //message:"" //------------
+	message = message || "Hello~";  //shortcut寫法, 可能會衍生一些問題
+	document.write( message, "<br>");
+}
+
+showMsg("祝大家早日康復~"); 
+showMsg("");//無言
+</script>
+
+
+<h2>參數給預設值=============4</h2>
+<script>
+function showMsg(message="Hello~~"){  //message:"" //------------
+	document.write( message, "<br>");
+}
+
+showMsg("祝大家早日康復~"); 
+showMsg("");//無言
+showMsg();
+</script>
+
+
+<h2>shortcut:己經知道答案就不用做了</h2>
+<script>
+	var a = 0;
+	var b = 20;
+	var result = a && b;
+	var result2 = a || b;
+	document.write("result : ", result, "<br>");
+	document.write("result2 : ", result2, "<br>");
+</script>
+
+<h2>shortcut:己經知道答案就不用做了======2</h2>
+<script>
+	var a = 10;
+	var b = 20;
+	var result = a && b; //20
+	var result2 = a || b;//10
+	document.write("result : ", result, "<br>");
+	document.write("result2 : ", result2, "<br>");
+</script>
+
+<h2>避免和全域方法同名</h2>
+<script>
+function alert(msg){
+	document.write( msg, "<br>");
+}	
+window.alert("test...........1");
+alert("test...........2");
+
+		
+</script>
+
+</body>
+</html>

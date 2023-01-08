@@ -1,0 +1,57 @@
+/* 6_removeClass  + 7_bind_on */
+
+.highlight{
+    background-color: yellow;
+}
+/* 11-textHover */
+.textHover{
+    cursor: pointer;
+}
+#theDiv{
+    border: 1px solid #ccc;
+    color: #666;
+    font: 16px tahoma;
+    /* tahoma無襯線的字 */
+    padding: 5px;
+    background-color: #eee;
+
+    position: absolute;
+    display: none;
+}
+
+
+/* 12_topMessage */
+#topMessage{
+    background: #666;
+    color: #eee;
+    font: 20px Tahoma;
+    padding: 15px;
+    text-align: center;
+    display: none;
+}
+#topMessage:hover{
+    cursor: pointer;
+    background: darkgreen;
+}
+
+/* 14_animation */
+.myPhoto{
+    width: 100%;
+}
+#imgBoard{
+    width: 100px;
+    background: #ccc;
+    padding: 30px;
+
+    position: absolute;
+    left: -130px;
+}
+
+/* 24_centerOfWindow */
+
+#inCenter{
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    position: absolute;
+}

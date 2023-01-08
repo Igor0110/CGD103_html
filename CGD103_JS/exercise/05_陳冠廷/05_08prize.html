@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+
+   <h2>作業08</h2>
+   <script>
+      var getRandom = function(x) {
+         return Math.floor(Math.random() * x);
+      }
+
+      // var i = 1;
+      var sum = 0;
+      var pickTimes = 10;
+
+      for(var i = 1; i <= pickTimes; i++) {
+         sum += getRandom(11);
+         if(getRandom(11) == 0) {
+            break;
+         }
+      }
+      
+      if(i > pickTimes) {
+         i = pickTimes;
+      }
+      var totalMoney = sum * 100;
+      
+      document.write(`Times : ${i}<br>Total price : ${totalMoney}`);
+
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h2>04</h2>
+   <script>
+      let orangePrice;
+      let orangeWeight;
+      orangePrice = 40;
+      orangeWeight = 1;
+      var totalPrice = orangePrice * orangeWeight;  //40
+
+      if(totalPrice >= 500 && totalPrice < 1000) {
+         totalPrice = totalPrice * 0.9;
+      } else if(totalPrice >= 1000) {
+         totalPrice = totalPrice * 0.7;
+      }
+      document.write(`you need to pay ${totalPrice} to buy it!`);
+   </script>
+</body>
+</html>

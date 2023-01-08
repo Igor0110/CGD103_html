@@ -1,0 +1,84 @@
+●CGD103 會議號  2555 592 5590
+       密碼    5590
+
+●查詢課表: https://www.tibame.com/curriculum/class
+班級代號:   CGD103      
+密碼:       izzc2u4q  
+
+●進度
+https://drive.google.com/drive/folders/1BJ8qP8I8KUD_sTFnjYcgQmJWxGm53xQV?usp=sharing
+
+<style>
+       h2 {
+              border-bottom-color: deeppink;
+              border-bottom-style: dashed;
+              border-bottom-width: 2px;
+
+              border-bottom: 2px dotted blue;
+       }
+</style>
+
+
+
+
+
+
+read 40 score
+average = (ch * 40 + en * 30 + math * 30)/100
+write 40 into file..
+
+
+
+const MAX_NUM = 40
+read MAX_NUM score
+average = (ch * 40 + en * 30 + math * 30)/100
+write MAX_NUM into file..
+
+
+JS...
+可以寫在哪裡?
+資料型別
+資料轉換
+
+運算式 : 
+
+流程控制 : 
+if, switch, for, while, do while
+
+陣列(搭配重覆)
+
+函式
+
+arr.sort(myCompareAsc)
+
+BOM : naviagtor, history, location, console, document(DOM)
+
+
+
+document
+
+取得元素物件的參考
+
+取得或異動元素的內容(innerText, innerHTML, value, textConten), 外觀
+
+事件驅動的程式設計模式-->什麼事?哪一個物件?該做什麼?
+
+互動機制(收藏、滑鼠事件、點小圖放大圖)//-----------
+
+動態效果
+
+事件物件(e.target, bubble, e.stopPropation(), capture, e.currentTarget)
+3代做法
+
+btn.onclick = function(){}
+btn.addEventListener("click", function(){}, false)
+
+string
+
+date
+
+form
+
+select change
+
+DOM(slider, 購物車)

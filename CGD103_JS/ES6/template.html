@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>defaultValue</title>
+</head>
+
+<body>
+
+<hr>
+
+<script type="text/javascript">
+
+//從前------------1
+var str = "<table border='1' cellspacing='0'>" 
+    str += "<tr><td>data</td><td>data</td></tr>";
+    str += "<tr><td>data</td><td>data</td></tr>"; 
+    str += "</table><hr>"; 
+document.write(str);
+
+
+//ES6------------可以使用反引號讓字串以多行形式呈列
+
+var html = `<table>
+	<tr><td>aaaa</td><td>bbb</td></tr>
+	<tr><td>aaaa</td><td>bbb</td></tr>
+	<tr><td>aaaa</td><td>bbb</td></tr>
+</table>`;
+document.write(  html, "<br>");
+
+//從前------------2	
+var name = "Ann";
+var price = 30;
+var amount = 20;
+
+var str = "姓名: " + name +  " <br>" ;
+    str += "消費總額: " + price*amount + "元<br>"; 
+
+document.write(str);
+
+//ES6------------可在反引號字串中使用${  }套入變數及運算
+name = "Alice";
+var price = 100;
+var amount = 300;
+
+var str = `姓名: ${name}<br>
+消費總額: ${price*amount}元<br>`;
+
+document.write( str, "<br>");
+</script>
+</body>
+</html>

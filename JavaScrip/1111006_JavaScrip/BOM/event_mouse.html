@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+</head>
+<body>
+<input type="button" id="btn" value="test">
+
+<table align="center" cellspacing="0" border="1">
+    <tr><td>11111111</td><td>aaaaaaaaaa</td></tr>
+    <tr><td>11111111</td><td>aaaaaaaaaa</td></tr>
+    <tr><td>11111111</td><td>aaaaaaaaaa</td></tr>
+    <tr><td>11111111</td><td>aaaaaaaaaa</td></tr>
+    <tr><td>11111111</td><td>aaaaaaaaaa</td></tr>
+</table> 
+
+<script>
+    // let member;
+    // 事件物件
+    function highLight(e){
+        let obj = e.target;
+        obj.style.backgroundColor = "blue";
+        console.log("target.tagName:",e.target.tagName);
+        console.log("e.currentTarget.tagName",e.currentTarget.tagName);
+        console.log("this.tagName",this.tagName);
+    }
+
+
+    function normal(e){
+        let obj = e.target;
+        obj.style.backgroundColor = "white";
+    }
+
+    function init(){
+        // 變數的初始設定
+        // 註冊事件處理器
+        let tds = document.getElementsByTagName("td");
+        //取回的是NodeList類別的物件,此物件內函length屬性記錄個數(tds.length)
+        //getElementsByTagName(tagName) 經由標籤名稱取得一些元素
+        for(let i =0; i<tds.length; i++){
+            tds[i].onmouseover = highLight;
+            tds[i].onmouseout = normal;
+        }
+    }
+    window.addEventListener("load",init, false);
+</script>  
+</body>
+</html>

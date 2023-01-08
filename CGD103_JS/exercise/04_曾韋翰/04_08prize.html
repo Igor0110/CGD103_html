@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>摸彩金 : 有11顆彩球, 彩球面額為0-10之間, 若摸到的彩球不為0,則可繼續摸彩,若摸到的彩球為0,則停止摸彩,並計算其摸彩次數及彩金總金額(單位:佰元)</h2>
+
+    <script>
+
+        // var sum = 0
+        // var n = 1;
+        // while(n <= 10){
+        //     for(i=1; i<=10; i++) {
+        //         j = Math.floor(Math.random(i) * 11)
+        //         if(j==0){
+        //             break;
+        //         }
+        //         document.write("第"+ n +"次：", j, "<br>");
+        //         sum += j
+        //         n++
+        //     };
+        // }
+        // document.write("總和：", sum + "佰元", "<br>");
+
+        var sum = 0;
+        var n = 1;
+        while(n <= 10){
+            j = Math.floor(Math.random() * 11);
+            document.write("第"+ n +"次：", j, "<br>");
+            sum += j;
+            n++;
+            if(j==0) {
+                break;
+            };
+        };
+        document.write("總和：", sum + "佰元", "<br>");
+            
+    </script>
+
+</body>
+</html>

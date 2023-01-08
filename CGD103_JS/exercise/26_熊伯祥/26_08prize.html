@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var sum = 0;
+      var numberOfTimes = 11;
+      for (var i = 1; i <= numberOfTimes; i++) {
+        var value = Math.floor(Math.random() * 11);
+        sum = sum + value;
+        document.write("第 " + i + " 次抽獎面額為 " + value + "<br>");
+        if (value === 0) {
+          break;
+        } else if (i === 11) {
+          break;
+        }
+      }
+      document.write(i + " 次抽獎總面額為 " + sum + "<br>");
+    </script>
+  </body>
+</html>

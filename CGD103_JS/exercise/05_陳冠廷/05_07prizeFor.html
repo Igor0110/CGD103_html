@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   
+   <h2>作業07</h2>
+   <script>
+      var getRandom = function(x) {
+         return Math.floor(Math.random() * x);
+      }
+
+      var sum = 0;
+      for(var i = 1; i <= 10; i++) {
+         sum += getRandom(11);
+      }
+      
+      var totalMoney = sum * 100;
+
+      document.write(`Congradualtions ! You just won ${totalMoney} dollars.`);
+
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css_reset.css">
+<!-- 插入 font-awesome -->
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/aef7372e6a.js" crossorigin="anonymous"></script>
+</head>
+
+    <title>Document</title>
+    <style>
+        nav{
+            /* line-height: ; */
+            font-family: "Noto Sans CJK TC", "Microsoft JhengHei", PingFang, STHeiti, sans-serif, serif;
+        }
+        html,body{
+            height: 100%;
+
+        }
+        body{
+            background-color: rgb(222, 195, 204);
+        }
+        .side-menu{
+            width: 300px;
+            height: 100%;
+            padding: 50px 0px;
+            box-sizing: border-box; 
+            background-image: linear-gradient(0deg,#e66465, #9198e5);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 5px 0px 10px rgba(185, 91, 160, 0.6);
+
+        }
+        .side-menu form{
+            display: flex;
+            margin: 0px 10px 50px;
+            border-radius: 100px;
+            border: 1px solid rgb(255,255, 255, .4);
+        }
+        .side-menu form input, 
+        .side-menu form button{
+            border: none;
+            background-color: transparent;
+            padding: 5px 10px;
+            color: #f1f1f1;
+        }
+        .side-menu form input{
+            width: 230px;
+        }
+        .side-menu form button{
+            width: 50px;
+        }
+        .side-menu form input:focus{
+            outline: none;
+        }
+        .side-menu form button:focus{
+            outline: none;
+        }
+        nav a{
+            display: block;
+            padding: 10px;
+            color: #f1f1ff;
+            text-decoration: none;
+            position: relative;
+            font-family: "Noto Sans CJK TC", "Microsoft JhengHei", PingFang, STHeiti, sans-serif, serif;
+        }
+        nav a + a::before{
+            content: "";
+            position: absolute;
+            border-top: 1px solid rgb(255,255, 255, .4);
+            left: 10px;
+            right: 10px;
+            top: 0;
+        }
+        nav a .fa{
+            margin-right: -1.1em;
+            transform: scale(0);
+            transition: 0.3s;
+        }
+        /* 確認em */
+
+        nav a:hover .fa{
+            margin-right: 0em;
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    
+<div class="side-menu">
+    <form>
+        <input type="search" placeholder="請輸入關鍵字">
+        <button>
+            <i class="fa-solid fa-search"></i>
+        </button>
+    </form>
+    <nav class="main-nav">
+        <a href="#">
+            <i class="fa fa-thumbs-o-up"></i>
+            選購泳衣
+        </a>
+        <a href="#">
+            <i class="fa-regular fa-thumbs-up"></i>
+            地圖探索
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-plug"></i>
+            挑選指南
+        </a>
+        <a href="#">
+            <i class="fa-brands fa-gratipay"></i>
+            關於我們
+        </a>
+    </nav>
+    
+</div>
+        
+
+</body>
+</html>

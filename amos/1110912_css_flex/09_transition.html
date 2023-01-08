@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            padding-top: 80px;
+            width: 300px;
+            height: 300px;
+            background-color: peachpuff;
+            transition: 1s;
+            color: crimson;
+            font-size: 18px;
+            /* transition-property: width, height ; 長寬
+            transition-duration: 1s, 1s;
+            transition-delay:    0s, 1s;
+            transition-timing-function: ;
+            transition: property duration delay timing; */
+            
+
+        }
+        .box:hover {
+            background-color: palevioletred;
+            width: 500px;
+            height: 500px;
+            font-size: 22px;
+            color: cornflowerblue;
+            font-weight: 600;
+            border-radius: 50%;
+            transition: width 1S 0S; height 1st 1st ;
+        }
+        .txt {
+            opacity: 0;
+            transition: 1s;
+        }
+        .box:hover .txt {
+            opacity: 1;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">練習動畫_transition
+        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatem sunt! Qui, provident architecto, odio repellendus dolore ex, rerum consequuntur sed officia iure beatae excepturi sint optio at pariatur deleniti.</p>
+    </div>
+
+</body>
+</html>

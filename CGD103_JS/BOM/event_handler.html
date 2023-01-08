@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+
+
+
+ 
+</head>
+
+<body>
+
+<input type="button" name="btn" value="10+20=?[0]" onclick="showAns();"> &nbsp;&nbsp;
+<input type="button" name="btn" value="10+20=?[1]"> &nbsp;&nbsp;
+<input type="button" name="btn" value="10+20=?[2]"> &nbsp;&nbsp;  
+
+<script>
+function showAns(){
+	var a=10; 
+	var b=20; 
+	window.alert(a+b);
+}
+
+function showSmile(){
+	window.alert("^_________________^");
+	btns[2].removeEventListener("click", showSmile, false);
+}
+
+function noAns(){
+	window.alert("不告訢你~");
+}
+
+let btns;
+
+function init(){
+	btns = document.getElementsByName("btn");;
+
+	btns[1].onclick = showAns; //callback function, 不可以寫成showAns()<<因為()表示立馬執行>>
+	btns[1].onclick = noAns;
+
+	btns[2].addEventListener("click", showAns, false); //可以針對不同的狀況加入或移除事件處理器
+	btns[2].addEventListener("click", showSmile, false);		
+}
+
+window.addEventListener("load", init, true);  //瀏覽器下載完畢時才去呼叫init函式來執行
+</script> 
+</body>
+</html>

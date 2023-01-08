@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keyword" content="HTML,CSS,Javascript">
+<title>Examples</title>
+
+<style>
+	h2 {
+		color:deeppink;
+	}
+</style>
+
+</head>
+
+<body>
+
+<h2>没有參數也没有傳回值</h2>
+<script>
+function sayHellow(){
+	document.write( "Hellow Word~<br>")
+	//沒有傳回值
+	return;   //
+}
+//要呼叫函式 函式才會出來
+//程式會先刷過一次 確認有哪些函數
+sayHellow();
+</script>
+
+
+<h2>有參數也没有傳回值</h2>
+<script>
+	function sayHellowToSomeone(myname){
+	document.write( myname, " ,Hellow Word~<br>")
+	return;   //執行區域變數 事在裡面執行，因為如果沒有回傳任何資料，return 可以省略
+	}
+	sayHellowToSomeone("李毅誠");  //  區域變數name :何ㄟ
+	// document.write(myname,"<br>")  無法印出myname 因為區域變數在裡面 //error
+
+</script>
+
+
+<h2>有參數, 有傳回值</h2>
+<p>在有些語言裡面，會根據參數裡面呼叫"三"個函數，提供所對應的參數  稱無over</p>
+<script>
+function sum(a, b) { //---區域a :10 , b:20
+	var total = 0;  //區域 total :0
+	total = a + b;  //區域 total :30
+	return total;
+}
+//被複寫 形同消失
+// var sum = new Function("a","b","var total=0 ; total=a+b ........")
+document.write("10+20 = ",sum(10,20),"<br>") 
+
+function sum(a, b ,c){  //------------a:10 b:20 c:underfined   
+	var total = 0;  //區域 total :0
+	total = a + b +c;  //區域 total :30
+	return total;
+}
+// a b c是 參數
+// 10 20 30 是引數
+
+document.write("10+20 = ",sum(10,20),"<br>") 
+document.write("10,20,30 =",sum(10,20,30))
+</script>
+
+
+<h2>arguments</h2>
+<script>
+function sum(a, b){  
+	var total = 0;  
+	//改寫下段程式
+	total = a + b;
+
+
+	return total;
+}
+function sum(a, b ,c){  //------------   arguments物件 :[10] [20] [30]  
+	//arguments不是陣列 只是一般物件 但可以用陣列表示法 
+	// arguments[0]--->10 ,arguments[1]--->20 ,arguments[2]--->30 arguments.length:3
+ 	var total = 0;  //區域 total :0
+	for(let i=0; i<arguments.length; i++){
+		total += arguments[i];
+	}
+
+	return total;
+}	
+
+document.write("10 + 20 =", sum( 10, 20), "<br>"); 
+document.write("10 + 20 + 30 =", sum( 10, 20, 30), "<br>");
+</script>
+
+
+<h2>參數給預設值======== 方法一</h2>
+<script>
+
+//以前寫法
+function showMsg(message){  //message:禱告~
+	if(message === undefined){
+		document.write("Hollow~");
+	}else{
+		document.write( message, "<br>");
+	}
+	
+}
+
+//現在寫法   方法一
+function showMsg(message="Hellow~~"){  //message:禱告~
+		document.write( message, "<br>");	
+}
+//有資料就用你的 沒有資料就用他的
+
+showMsg("禱告~");
+showMsg();
+</script>
+
+<h2>參數給預設值 1111006 ========= 方法二</h2>
+<script>
+//新寫法
+function showMsg(message="Hellow~~"){  //message:禱告~
+	message = message || "Hollo~"
+	document.write( message, "<br>");	
+}
+//有資料就用你的 沒有資料就用他的
+
+showMsg("禱告~");
+showMsg();
+</script>
+
+<h2>參數給預設值 1111006 ==========方法三 </h2>
+<script>
+//新寫法
+function showMsg(message="Hellow~~"){  //message:禱告~
+	message = message || "Hollo~"
+	document.write( message, "<br>");	
+}
+
+
+showMsg("禱告~");
+showMsg(""); //空字串 無言
+</script>
+
+<h2>參數給預設值 1111006=========方法四 </h2>
+<script>
+//新寫法
+function showMsg(message="Hellow~~"){  //message:禱告~
+	message = message || "Hollo~"
+	document.write( message, "<br>");	
+}
+
+showMsg("禱告~");
+showMsg(""); //空字串 無言
+showMsg(); 
+
+</script>
+<h2 style="color:blueviolet">shortcut  題型一  a改成0</h2>
+<script>
+	var a = 0;
+	var b = 20;
+	var result =a && b;
+	var result2 =a || b;
+	document.write("result :", result,"<br>");
+	document.write("result2 :", result2,"<br>");
+
+</script>
+</script>
+<h2 style="color:blueviolet">shortcut 題型二</h2>
+<script>
+	var a = 10;
+	var b = 20;
+	var result =a && b; //a是ture, 要做到b才知道是20,所以show20
+	var result2 =a || b; //b是ture，因為|| 是or ，所以做到a就知道是ture，write是10
+	document.write("result :", result,"<br>");
+	document.write("result2 :", result2,"<br>");
+
+</script>
+
+<h2>避免和全域方法同名</h2>
+<script>
+window.alert("test...........1");
+alert("test...........2");		
+
+function alert(msg){
+	document.write(msg, "<br>")
+}
+
+//alert 覆蓋 -蓋掉window提供的跳窗功能
+
+</script>
+
+
+</body>
+</html>

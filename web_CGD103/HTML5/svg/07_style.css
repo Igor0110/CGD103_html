@@ -1,0 +1,26 @@
+svg {
+    width: 250px;
+    border: 2px solid maroon;
+}
+#svg_1 {
+    stroke: maroon;
+    stroke-width: 5px;
+    fill: none;
+}
+#svg_2 {
+    stroke: green;
+    stroke-width: 5px;
+    fill: none;
+}
+#svg_2 circle {
+    stroke: slateblue;
+}
+
+#svg_3 {
+    fill: none;
+    stroke: rgb(103, 77, 24);
+}
+#svg_3 circle {
+    stroke: rgb(103, 77, 24);
+    fill: rgb(103, 77, 24);
+}

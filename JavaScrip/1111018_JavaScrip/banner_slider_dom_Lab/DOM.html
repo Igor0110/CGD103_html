@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<style>
+	#dotPanel{
+		position: relative;
+		width : 320px;
+		margin: auto;
+	}
+
+	#dotPanel span{
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: #CCC;
+		margin:10px;
+	}
+</style>
+</head>
+<body>
+
+
+	<div id="dotsPanel">
+		<span>a </span><!--test-->
+		<span>b </span>
+		<span>c </span>
+		<span>d </span>
+		<span>e</span>
+		<span>f </span>
+	</div>   
+
+	<script>
+	let dotsPanel = document.getElementById("dotsPanel");	
+	console.log(dotsPanel.childNodes);
+	//dotsPanel.previousSibling , dotsPanel.nextSibling
+	console.log(dotsPanel.children);
+	//dotsPanel.previousElementSibling, dotsPanel.nextElementSibling
+
+	console.log(document.getElementsByTagName("div"))
+	</script> 
+</body>
+</html>

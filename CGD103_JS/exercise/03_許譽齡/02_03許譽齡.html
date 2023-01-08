@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>今天到目前為止所經過的秒數(比如8000秒)，請將其轉換成時分秒後顯示在頁面上。</h2>
+    <script>
+        var totalSecond = 10;
+        var hour = parseInt (totalSecond / 3600);
+        var minute = parseInt (totalSecond % 3600 / 60);
+        var second = totalSecond % 60;
+        document.write(hour, "時");
+        document.write(minute, "分");
+        document.write(second, "秒");
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <div class="container mt-5 pt-5" >
+        <p>Lorem ipsum dolor sit amet 
+            <!-- 滑鼠一過 有反映 -->
+            <span data-bs-toggle="tooltip" data-bs-title="文字提示內容" data-bs-placement="right" >consectetur adipisicing elit. </span> 
+            laboriosam vel, ad quae consectetur
+            <span class="border" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="Popovers出現的內容" data-bs-placement="left"  > 
+                itaque cumque debitis,</span> 
+            <!-- 摸到沒反應點一下才有反應 Popovers-->
+            ducimus nisi ipsam blanditiis. Dicta dolore error perspiciatis non beatae ad sequi hic.</p>
+    </div>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+      </script>
+      <!-- 文字題是要增加 script -->
+      <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+      </script>
+  </body>
+
+
+</html>

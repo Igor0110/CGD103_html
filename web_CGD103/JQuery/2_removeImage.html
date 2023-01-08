@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="./js/jquery-3.6.1.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+    <script>
+
+        // $(document).ready(function(){
+        //     $().();
+        // })
+
+        $(document).ready(function(){
+            $('img').click(function(){
+                $(this).remove()  //this 是指被按得那一個
+            });
+        })
+
+        // 不要寫引號 this ducument 
+    </script>
+</head>
+<body>
+    <img src="../images/small/FARM1.gif" alt="">
+    <img src="../images/small/FARM2.gif" alt="">
+    <img src="../images/small/FARM3.gif" alt="">
+    <img src="../images/small/FARM4.gif" alt="">
+
+</body>
+</html>

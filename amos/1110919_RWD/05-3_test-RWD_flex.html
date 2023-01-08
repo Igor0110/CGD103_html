@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* margin 用10px去計算 */
+        .item{
+            background-color: palevioletred;
+            border: 1px solid black;
+            width: 43.697916%;
+            margin: 1.30208%;
+            box-sizing: border-box;
+        }
+        
+        .wrap{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .item img{
+            width: 100%;
+        }
+        @media screen and (min-width:768px )  {
+            .item{
+                width: 32.421875%;
+                margin: 10px 1.30208%;
+            }
+        }
+        @media screen and (min-width:1024px) {
+            .item{
+                width: 24.511718%;
+                margin: 10px 0.976562%;;
+            }            
+        }
+        @media screen and  (min-width:1200px){
+            .item{
+                width: 16.388888%;
+                margin:10px 0.833333%;
+            }            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item">
+                <img src="https://picsum.photos/100/100/?random=10">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsa suscipit doloribus laudantium nesciunt, animi, minus unde, vel voluptatem aut nisi voluptatum neque eaque magni placeat eos enim? Deleniti, dignissimos.</p>
+        </div>
+        <div class="item">
+                <img src="https://picsum.photos/100/100/?random=10">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsa suscipit doloribus laudantium nesciunt, animi, minus unde, vel voluptatem aut nisi voluptatum neque eaque magni placeat eos enim? Deleniti, dignissimos.</p>
+        </div>
+        <div class="item">
+                <img src="https://picsum.photos/100/100/?random=10">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsa suscipit doloribus laudantium nesciunt, animi, minus unde, vel voluptatem aut nisi voluptatum neque eaque magni placeat eos enim? Deleniti, dignissimos.</p>
+        </div>
+        <div class="item">
+                <img src="https://picsum.photos/100/100/?random=10">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsa suscipit doloribus laudantium nesciunt, animi, minus unde, vel voluptatem aut nisi voluptatum neque eaque magni placeat eos enim? Deleniti, dignissimos.</p>
+        </div>
+        <div class="item">
+                <img src="https://picsum.photos/100/100/?random=10">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsa suscipit doloribus laudantium nesciunt, animi, minus unde, vel voluptatem aut nisi voluptatum neque eaque magni placeat eos enim? Deleniti, dignissimos.</p>
+        </div>
+        <div class="item">
+                <img src="https://picsum.photos/100/100/?random=10">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsa suscipit doloribus laudantium nesciunt, animi, minus unde, vel voluptatem aut nisi voluptatum neque eaque magni placeat eos enim? Deleniti, dignissimos.</p>
+        </div>
+    </div>
+</body>
+</html>

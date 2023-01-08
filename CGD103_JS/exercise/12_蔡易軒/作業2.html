@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      var i = 1;
+      var j = Math.floor(Math.random() * 50);
+      var sum = 0;
+      var isum = 0;
+      var jsum = 0;
+      while (i <= j) {
+        if (i % 2 == 0) {
+          isum += i;
+        }
+        sum += i;
+        i++;
+      }
+      jsum = sum - isum;
+      document.write("變數為", j, "<br>");
+      document.write("1 到", j, "間偶數和", isum, "<br>");
+      document.write("1 到", j, "間基數和", jsum, "<br>");
+      document.write("1 到", j, "間總和", sum, "<br>");
+    </script>
+
+    <br />
+
+    <script>
+      var sum = 0;
+      var number;
+
+      for (var i = 1; i <= 10; i++) {
+        number = Math.floor(Math.random() * 11);
+        document.write("第", i, "次，抽到", number, "<br>");
+        sum += number;
+      }
+      document.write("總金額", sum, "<br>");
+    </script>
+
+    <br />
+
+    <script>
+      var count = 0;
+      var sum = 0;
+      var number;
+
+      do {
+        number = Math.floor(Math.random() * 11);
+        count++;
+        document.write("第", count, "次，抽到", number, "<br>");
+        sum += number;
+      } while (number != 0);
+      document.write("總金額", sum, "<br>");
+    </script>
+
+    <br />
+
+    <script>
+      for (var i = 1; i < 7; i++) {
+        for (var j = 1; j <= i; j++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+    </script>
+
+    <br />
+
+    <script>
+      for (var i = 1; i < 7; i++) {
+        for (var j = 1; j <= i; j++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+      for (var i = 5; i >= 1; i--) {
+        for (var j = 1; j <= i; j++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+    </script>
+
+    <br />
+
+    <script>
+      for (var i = 1; i <= 6; i++) {
+        for (var j = 1; j <= i; j++) {
+          document.write(j);
+        }
+        document.write("<br>");
+      }
+    </script>
+
+    <br />
+
+    <script>
+      var sum = 0;
+      for (var i = 1; i <= 10; i++) {
+        sum += i;
+        for (var j = 1; j <= i; j++) {
+          document.write(j);
+          if (i === j) {
+            break;
+          }
+          document.write("+");
+        }
+        document.write("=", sum);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

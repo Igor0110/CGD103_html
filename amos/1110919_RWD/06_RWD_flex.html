@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .deta{
+            background-color: palegreen;
+        }
+        .column{
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        @media screen and (min-width:768px) {
+            .column{
+                width: 33.33333%;
+            }
+        }
+        @media screen and (min-width:1024px) {
+            .column{
+                width: 25%;
+            }
+        }
+        @media screen and (min-width:1200px) {
+            .column{
+                width: 16.6666%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="column">
+            <div class="deta">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam maiores iste laudantium vitae. Tenetur, consequuntur expedita. Exercitationem facere dolore eveniet natus repellendus! Dignissimos assumenda, impedit ipsa consequuntur itaque laborum earum!
+            </div>
+        </div>
+        <div class="column">
+            <div class="deta">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam maiores iste laudantium vitae. Tenetur, consequuntur expedita. Exercitationem facere dolore eveniet natus repellendus! Dignissimos assumenda, impedit ipsa consequuntur itaque laborum earum!
+            </div>
+        </div>
+        <div class="column">
+            <div class="deta">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam maiores iste laudantium vitae. Tenetur, consequuntur expedita. Exercitationem facere dolore eveniet natus repellendus! Dignissimos assumenda, impedit ipsa consequuntur itaque laborum earum!
+            </div>
+        </div>
+        <div class="column">
+            <div class="deta">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam maiores iste laudantium vitae. Tenetur, consequuntur expedita. Exercitationem facere dolore eveniet natus repellendus! Dignissimos assumenda, impedit ipsa consequuntur itaque laborum earum!
+            </div>
+        </div>
+        <div class="column">
+            <div class="deta">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam maiores iste laudantium vitae. Tenetur, consequuntur expedita. Exercitationem facere dolore eveniet natus repellendus! Dignissimos assumenda, impedit ipsa consequuntur itaque laborum earum!
+            </div>
+        </div>
+        <div class="column">
+            <div class="deta">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam maiores iste laudantium vitae. Tenetur, consequuntur expedita. Exercitationem facere dolore eveniet natus repellendus! Dignissimos assumenda, impedit ipsa consequuntur itaque laborum earum!
+            </div>
+        </div>
+    </div>
+</body>
+</html>

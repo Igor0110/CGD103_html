@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>String</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var str="abcdeabcde";
+
+var obj = new String("abcde");
+
+document.write("typeof str : " , typeof str, "<br>"); 
+document.write("typeof obj : " , typeof obj, "<br>"); 
+
+
+
+document.write("length : " , str.length, "<br>"); 
+document.write("toUpperCase() : " , str.toUpperCase(), "<br>"); 
+
+document.write("indexOf('cd') :從第0個位置開始往後找,找到s字串在字串中第一次出現的位置索引值,若找不到則傳回-1 ：" , str.indexOf("cd"), "<br>");   //cd出現在字串的位置 位置是第二個
+
+document.write("indexOf('cdd') : " , str.indexOf("cdd"), "<br>"); //cdd出現在字串的位置 找不到是-1
+
+document.write("lastIndexOf('cd') 從第n個位置開始往前找,找到s字串在字串中第一次出現的位置索引值,若找不到則傳回-1: " , str.lastIndexOf('cd'), "<br>"); 
+
+document.write("lastIndexOf('cdd') : " , str.lastIndexOf('cdd'), "<br>");  //cdd出現在字串的位置 找不到是-1
+
+document.write("match('cd') :若s字串在字串中找得到,則傳回s字串,否則,傳回null " , str.match('cd'), "<br>"); 
+document.write("match('cdd') : " , str.match('cdd'), "<br>"); 
+
+document.write("charAt(3) 取得索引值為n的字元: " , str.charAt(3), "<br>");  
+document.write("charCodeAt(3) 取得索引值為n的字元內碼: " , str.charCodeAt(3), "<br>"); 
+
+//abcdeabcde
+document.write("substr(2,5) : 從字串中的start處取出長度為length的子字串" , str.substr(2,5), "<br>");  //cdeab
+document.write("substring(2,5) 取出字串中的start處到end-1處的子字串: " , str.substring(2,5), "<br>"); //cde
+
+document.write("substr(2,50) : " , str.substr(2,50), "<br>"); 
+document.write("substr(2) : " , str.substr(2), "<br>"); 
+
+document.write("replace('de','QQQ') : " , str.replace('de','QQQ'), "<br>"); 
+document.write("replace('de','QQQ') : " , str.replace(/de/g,'QQQ'), "<br>"); 
+
+str = "aa,bb,cc:dd,ee,ff";
+var arr = str.split(",");
+
+
+document.write( "<hr>");
+//--------------------字串轉成陣列
+str = "abcdeabcde";
+var arr = str.split("");
+for (let data of arr){
+    document.write( data , "<br>");
+}
+document.write("<hr>");
+//----------------------
+//--------------反轉字串後輸出
+str = "Hello~~";
+//先轉成陣列, 在反轉, 在串接起來
+//[H,e,l,l,o,~]
+//[~.o,l,l,e,H]
+
+var reverseHello
+reverseHello = str.split("").reverse().join("")
+document.write("反轉後",reverseHello,"<br>")
+
+document.write("<hr>")
+
+//檔案全名
+let fileSwe = "sara.smile";
+let fileStr = "sara.smile.pptx"
+
+//取出主檔名,副檔名
+let fileName,fileExt;
+let dot = fileStr.lastIndexOf(".");
+fileName = fileStr.substring(0,dot);  //sara.smile
+fileExt = fileStr.substr(dot+1);
+document.write("fileName:",fileName,"<br>");
+document.write("fileExt:",fileExt,"<br>");
+
+
+//副檔名必須是 bmp png gif ico 其中之一,檔案格式才被接受
+
+let allowed = ["bmp","png","gif","ico"];
+if(allowed.indexOf(fileExt) == -1){
+    document.write( `${fileStr}檔案格式不含<br>`);
+
+}else{
+    document.write(`${fileStr}檔案格式OK<br>`)
+}
+</script>    
+</body>
+</html>

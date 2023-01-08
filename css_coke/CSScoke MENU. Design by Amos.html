@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://csscoke.com/example/3D_menu/3D_MENU2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>CSScoke MENU. Design by Amos</title>
+<style>
+*{
+	margin:0;
+	padding:0;}
+.menu{ text-align:center; margin-top:100px; height:42px;
+	background:url(steel.png) repeat left top;
+	letter-spacing:-3px;}
+.menu li{
+	display:inline-block;
+	letter-spacing:0;}
+.menu li a{
+	display:inline-block;
+	padding:0 20px;
+	height:40px;
+	line-height:40px;
+	position:relative;
+	top:1px;
+	color: #FF0;
+	text-shadow:0 0 10px #000;
+	text-decoration:none;
+	background-image: -webkit-radial-gradient(50% 50%, circle, #666 0%, #333 100%);
+	background-image: -moz-radial-gradient(50% 50%, circle, #666 0%, #333 100%);
+	box-shadow:0 0 5px #000 inset;}
+.menu li a:before,
+.menu li a:after{
+	content:attr(alt);
+	display:block;
+	position:absolute;
+	z-index:2;
+	left:0;
+	top:0;
+	height:20px;
+	overflow:hidden;
+	padding:0 20px;
+	color:#FFF;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+	-webkit-transition:.3s;
+	transition:.3s;
+	background:url(steel.png) repeat -2px -1px;
+	text-shadow:0 0 5px #000, 0 0 10px #000, 0 0 10px #000, 0 0 10px #000;}
+.menu li a:before{
+	background-color:#000;
+	-webkit-transform-origin:center center -20px;
+	-webkit-transform:perspective(200px) rotateX(0deg) translateZ(-20px);
+	transform-origin:center center -20px;
+	transform:perspective(200px) rotateX(0deg) translateZ(-20px);}
+.menu li a:after{
+	top:20px;
+	line-height:2px;
+	background-color:#000;
+	-webkit-transform-origin:center center -20px;
+	-webkit-transform:perspective(200px) rotateX(0deg) translateZ(-20px);
+	transform-origin:center center -20px;
+	transform:perspective(200px) rotateX(0deg) translateZ(-20px);}
+.menu li a:hover:before{
+	-webkit-transform:perspective(200px) rotateX(45deg);
+	transform:perspective(200px) rotateX(45deg);
+	box-shadow:0 5px 5px #000;}
+.menu li a:hover:after{
+	-webkit-transform:perspective(200px) rotateX(-45deg);
+	transform:perspective(200px) rotateX(-45deg);
+	box-shadow:0 -5px 5px #000;}
+.menu li:nth-child(2) a:before,
+.menu li:nth-child(2) a:after{
+	background-position:-5px -1px;}
+.menu li:nth-child(3) a:before,
+.menu li:nth-child(3) a:after{
+	background-position:-3px -1px;}
+.menu li:nth-child(4) a:before,
+.menu li:nth-child(4) a:after{
+	background-position:2px -1px;}
+
+div{ text-align:center; padding: 50px 0; color: #666;}
+</style>
+</head>
+
+<body>
+<ul class="menu">
+	<li><a href="javascript:;" alt="THIS">THIS</a></li>
+	<li><a href="javascript:;" alt="IS">IS</a></li>
+	<li><a href="javascript:;" alt="CSS">CSS</a></li>
+	<li><a href="javascript:;" alt="COKE">COKE</a></li>
+	<li><a href="javascript:;" alt="MENU">MENU</a></li>
+</ul>
+<div>
+	<h1>CSS3 MENU DESIGN BY CSSCOKE.COM</h1>
+	<p>No javascript, only CSS</p>
+</div>
+
+
+</body></html>

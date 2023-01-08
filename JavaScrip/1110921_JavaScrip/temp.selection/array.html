@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keyword" content="HTML,CSS,Javascript">
+<title>Examples</title>
+
+<style>
+	h2 {
+		color:deeppink;
+	}
+</style>
+
+</head>
+
+<body>
+
+
+
+<h2>建立陣列</h2>
+<script>
+	//也可以放字串 或是布林值
+	var arr =new Array(11,22,33);
+	for(var i =0; i<3;i++){
+		document.write(arr[i],"<br>")
+	}
+	//另一寫法
+	document.write(arr[0],"、",arr[1],"、",arr[2],"<br>")
+</script>
+
+<h2>建立陣列</h2>
+<script>
+	//也可以放字串 或是布林值
+	var arr =new Array(11,22,33,44,"apple");
+	for(var i =0;i<arr.length ; i++){
+		document.write("arr[i]:",arr[i],"<br>")
+	}
+
+</script>
+
+<h2>length</h2>
+<script>
+var arr = new Array(11, 22, 33);
+for(var i = 0; i < 6; i++){ //?????
+	document.write( "arr[i] : ", arr[i], "<br>"); 
+}
+</script>
+
+
+
+<h2>其內的資料可以是不同的型別</h2>
+<script>
+var arr = new Array(11,"This is a book",true);
+for(var i = 0; i < arr.length; i++){ 
+	document.write( "arr[i] : ", arr[i], "<br>"); 
+}
+</script>
+
+
+
+<h2>將陣列中的資料串接成字串------自己做</h2>
+<script>
+	var arr = new Array(11, 22, 33);
+	var str = "";
+
+	var length =arr.length;
+	for(var i=0; i < length-1; i++){
+		str += arr[i] + ",";
+	}
+	str += arr[i];
+
+	document.write( str, "<br>");
+</script>
+
+
+
+
+<h2>將陣列中的資料串接成字串------使用陣列的toString(), join()</h2>
+<script>
+var arr = new Array(11, 22, 33);
+var str = arr.toString();
+var str2 = arr.join("@@")
+
+document.write( str, "<br>");
+document.write( str2, "<br>");
+</script>
+
+<h2>陣列可以動態配置 javascrip </h2>
+<script>
+	var arr = new Array(11, 22, 33);
+	arr[3]=100;
+	arr[6]=600;
+
+	for(var i=0; i<arr.length; i++){
+		document.write("索引變數",i,"<br>")
+		document.write("物件變數",arr[i],"<br>")
+	}
+</script>
+
+<h2>陣列  for ( i in 物件) ---詳細: for (索引變數  in 物件變數)</h2>
+<p>此寫法的特性，不需要宣告 索引變數起始值，只會秀出KEY，無資料情況下會自動跳掉</p>
+<script>
+	var arr = new Array(11, 22, 33);
+	arr[3]=100;
+	arr[6]=600;
+
+	for(var i in arr){
+		document.write("索引變數:",i," ")
+		document.write("物件變數",arr[i],"<br>")	
+	
+	}
+
+	// 另一個寫法 	document.write( `${i} : ${arr[i]} <br>`
+
+
+	
+</script>
+
+
+<h2>將陣列中的資料串接成字串------使用自動呼叫的toString()</h2>
+<script>
+// var arr = new Array(11, 22, 33);
+
+// document.write( "<br>");//?????
+</script>
+
+
+
+
+<h2>將新的資料放到陣列的最後面------自己做</h2>
+<script>
+var arr = new Array(11, 22, 33);
+
+arr[arr.length] =100;
+arr[arr.length] =200;
+
+//印出陣列
+document.write( arr.toString(),"<br>");
+document.write( arr,"<br>");  //自動呼叫toString
+
+
+// for(var i=0; i<arr.length; i++){
+// 	document.write( arr[i], "<br>");
+// }
+</script>
+
+
+
+
+<h2>將新的資料放到陣列的最後面------使用陣列的push()</h2>
+<p>首頁後 跳到新頁面  首頁放在新頁面的後面</p>
+<script>
+var arr = new Array(11, 22, 33);
+
+
+// arr.push(100);
+// arr.push(200);
+
+
+
+document.write( "目前長度",arr.push(100), "<br>"); //?
+
+var len1 = arr.push(100);
+var len2 = arr.push(200);
+
+document.write( arr, "<br>"); //?
+document.write( len1, "<br>"); //?
+document.write( len2, "<br>"); //?
+
+</script>
+
+
+
+
+<h2>將新的資料(100)insert到陣列中的特定位置(3)------自己做錯誤寫法</h2>
+<script>
+var arr = new Array(11, 22, 33, 44, 55, 66, 77);
+
+var length = arr.length;
+for( let i=3; i<length; i++){
+	arr[i+1] = arr[i];
+}
+
+
+document.write(arr, "<br>");
+
+</script>
+<h2>將新的資料(100)insert到陣列中的特定位置(3)------自己做</h2>
+<script>
+
+var arr = new Array(11, 22, 33, 44, 55, 66, 77);
+
+var length = arr.length;
+for( let i=length-1; i>=3; i--){
+	arr[i+1] = arr[i];
+}
+
+document.write(arr, "<br>");
+</script>
+
+
+<script>
+	// 錯誤寫法
+// for( let i =3; i<length; i++){
+// 	arr[i+1] = arr[i];
+// }
+
+// //?????
+
+// //印出陣列
+// document.write(  "<br>");  //?????
+
+// for(var i in arr){
+// 		document.write("索引變數:",i," ")
+// 		document.write("物件變數",arr[i],"<br>")	
+	
+// 	}
+</script>
+
+
+
+
+<h2>concat()  </h2>
+<p>串接兩個陣列 並新增 不會更動原本的陣列</p>
+<script>
+var arr = new Array(11, 22, 33);
+var arr2 = new Array(55, 66, 77);
+
+var arr3 = arr.concat(arr2);
+
+document.write( arr, "<br>");
+document.write( arr2, "<br>");
+//concat()後的陣列
+// //?????
+document.write( arr3, "<br>");
+
+</script>
+
+
+<h2>pop():自陣列中的最後面丟出資料並自陣列中刪掉該資料</h2>
+<p>原陣列變動</p>
+<p>傳回陣列中的最後一個元素,並移除該元素</p>
+<script>
+var arr = new Array(11, 22, 33);
+
+var data = arr.pop();
+
+document.write( "pop出", data, "<br>"); //?????
+document.write( arr, "<br>");
+
+</script>
+
+<h2>slice(start, end)</h2>
+<p>拷貝自索引值start處到end-1處的子陣列後傳回(不會從原陣列中移除)
+</p>
+<script>
+var arr = new Array(11, 22, 33, 44, 55, 66, 77);
+//拷貝陣列中的資料
+var arr2 = arr.slice(3 , 5) //44,55
+
+document.write( arr, "<br>"); //11,22,33,44,55,66,77
+document.write( arr2, "<br>");
+</script>
+
+
+<h2>splice(start, n, data1, data2,....)</h2>
+<p>)將陣列中索引值start處後的n個元素移除並傳回,然後插入資料ele1,ele2,.</p>
+<script>
+var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99);
+//取出資料
+arr2 = arr.splice(3, 5, 100, 200, 300); //44,55,66,77,88
+
+document.write( arr, "<br>");  //11,22,33,,99
+document.write( arr2, "<br>"); 
+</script>
+
+<h2>將資料(100)insert到陣列中的特定位置(3)------可以使用splice()來模擬</h2>
+<script>
+var arr = new Array(11, 22, 33, 44, 55, 66, 77);
+var arr2 = arr.splice(3,0,100) //在索引值3的位置，移走0個，插入100;
+document.write( "arr:",arr, "<br>");
+document.write( arr2, "<br>") ;
+</script>
+
+
+<h2>將特定位置(3)的資料自陣列中移除------可以使用splice()</h2>
+<script>
+var arr = new Array(11, 22, 33, 44, 55, 66, 77);
+//?????
+arr2 = arr.splice(3,1); //在索引值3的位置，移除走;
+document.write( "arr:",arr, "<br>"); 
+document.write( "arr2:",arr2, "<br>"); 
+document.write( "arr2:",arr2[0], "<br>"); 
+
+</script>
+
+
+<h2>unshift():將新的資料insert進陣列的最前面</h2>
+<p>將新的元素加入陣列的最前面</p>
+<script>
+var arr = new Array(11, 22, 33);
+
+//?????
+arr2 = arr.unshift(100);
+
+document.write( arr, "<br>");//陣列內容
+</script>
+
+
+<h2>shift():將陣列最前面的資料移出</h2>
+<p>回陣列中的第一個元素,並移除該元素</p>
+<script>
+var arr = new Array(11, 22, 33, 44, 55,66);
+
+//?????
+arr2 = arr.shift();
+
+document.write( arr, "<br>");//陣列內容
+document.write("data:", data, "<br>");
+</script>
+
+
+<h2>reverse()</h2>
+<script>
+var arr = new Array(11, 22, 33);
+
+document.write( arr, "<br>");  //反轉前
+//?????
+arr.reverse();
+document.write( arr, "<br>");  //反轉後
+</script>
+
+
+
+
+<h2>splice(start, n, data1, data2,....)----------------2</h2>
+<script>
+// var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99);
+// //取出資料, 也加入新的資料
+// //?????
+// document.write( arr, "<br>");
+// document.write( arr2, "<br>");
+</script>
+
+
+
+
+
+
+
+
+
+
+<h2>indexOf()</h2>
+<p>自索引start處找出data在array中第一次出現的位置之索引值</p>
+<p>start 也可以不寫 不寫就會是從頭開始</p>
+<p>start從哪裡開始找，所以才會</p>
+<script>
+var arr = new Array(11, 22, 33, 44, 55, 22, 77, 88, 33, 66);
+
+document.write( "arr.indexOf(33) :", arr.indexOf(33),  "<br>"); //2
+document.write( "arr.indexOf(333) :", arr.indexOf(333),"<br>"); //找不到 傳回-1
+document.write( "arr.indexOf(33, 5) :", arr.indexOf(33,1),"<br>"); //8
+
+
+</script>
+
+
+<h2>for( i in arr) ___for( 索引變數	 in 物件變數)(</h2>
+<script>
+var arr = new Array(11, 22, 33);
+//改寫下段程式碼
+arr[3] =100;
+arr[6] =600;
+
+//for(var i = 0; i < 6; i++){ 
+for(var i in arr){
+	document.write( `${i}:${ arr[i]}`, "<br>"); 
+}
+</script>
+<h2>for( i in arr) ___for( 資料變數	 in 物件變數)(</h2>
+<script>
+var arr = new Array(11, 22, 33);
+//改寫下段程式碼
+arr[3] =100;
+arr[6] =600;
+
+//for(var i = 0; i < 6; i++){ 
+for(var data of arr){
+	document.write( data, "<br>"); 
+}
+</script>
+
+
+<h2>陣列變數的操作</h2>
+<p>數A的物件參考指定給陣列變數B，則它們參考到同一個陣列物
+件。也就是透過任一陣列變數(如B) 去修改陣列中的值後，經由另一陣列變
+數(如A)去取值時，也會得到那個新的異動結果。</p>
+<script>
+var arr = new Array(11, 22, 33);
+var arr2 = arr;
+
+document.write("原陣列的內容", arr, "<br>");//原陣列的內容
+arr2[2] = 300; //改變arr2陣列的內容
+document.write("改變後arr :", arr, "<br>");//原陣列的內容	
+document.write("改變後arr2 :", arr2, "<br>");
+
+
+for(let i=0; i<40 ;i++){
+	// avg[i] = (<)score1[i] + score1[i] + score1[i] ....)/2
+
+}
+
+
+</script>
+ 
+ 
+</body>
+</html>

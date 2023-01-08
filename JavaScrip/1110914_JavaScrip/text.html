@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var x = 10;
+    document.write( "x : ", x, "<br>"); 
+    x = x + 1;
+    document.write( "x : ", x, "<br>"); 
+    x += 1;
+    document.write( "x : ", x, "<br>"); 
+    ++x;
+    document.write( "x : ", x, "<br>"); 
+    x++;
+
+    // – 如果在前面，變數值先遞增/遞減，再取值做其它運算
+    var z = 10;
+    var y = ++z + 5; //11+5=16
+    document.write( "z : ", z, "<br>");
+    document.write( "y : ", y, "<br>");   
+
+    //– 如果在後面，則先取值以執行運算，然後再遞增/遞減
+    var z = 10; //z:10 -->11
+    var y = z++ + 5; //10+5=15 -->15
+    document.write( "z : ", z, "<br>");
+    document.write( "y : ", y, "<br>");  
+</script>
+<br>:段落
+<p>:段落</p>
+<br>:&lt段落&gt;
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>作業06</h2>
+    <script>
+        var i = 1;
+        var j = Math.floor(Math.random()*50);
+        var sum = 0;
+        var isum =0;
+        var jsum=0;
+        while(i<=j){
+            if(i%2 ==0){
+                isum += i;
+            }
+            sum +=i;
+            i++;
+        }
+        jsum = sum - isum;
+        document.write("變數為",j,"<br>")
+        document.write("1 到",j,"間的總和",sum,"<br>");
+        document.write("1 到",j,"間的偶數和",isum,"<br>");
+        document.write("1 到",j,"的基數和",jsum,"<br>");
+
+    </script>
+
+    <h2>作業07 摸彩10次 可以把球放回去</h2>
+    <p>摸彩金 : 有11顆彩球, 彩球面額為0-10之間,</p>
+    <p>可以摸彩10次, 印出其每次的摸彩金額及最</p>
+    <p>後的彩金總金額(單位:佰元)</p>
+    <script>
+        var i = 0;
+        var number =1;
+        var sum = 0;
+        while(number <= 10){
+            i = Math.floor(Math.random()*11);
+            document.write("第",number,"次，抽到",i,"單位(佰元)<br>")
+            sum += i;
+            number ++;
+            
+        }
+        document.write("總共收到金額",sum,"單位(佰元)<br>")
+    </script>
+
+
+    <h2>作業08 摸彩10次 可以把球放回去 若抽到0元結束抽獎</h2>
+    <p>摸彩金 : 有11顆彩球, 彩球面額為0-10之間, </p>
+    <p>若摸到的彩球不為0,則可繼續摸彩,若摸到的彩球為0,</p>
+    <p>則停止摸彩,並計算其摸彩次數及彩金總金額(單位:佰元) </p>
+    <script>
+        var i = 0;
+        var number =1;
+        var sum = 0;
+        
+        while(number <= 10){
+            i = Math.floor(Math.random()*10);
+            document.write("第",number,"次，抽到",i,"單位(佰元)<br>")
+            sum += i;
+            number ++;
+            if(i == 0){
+                break;
+            }
+            
+        }
+        document.write("總共收到金額",sum,"單位(佰元)<br>")
+    </script>
+
+    <h2>作業09 巢狀迴圈練習</h2>
+
+    <script>
+        
+        for(var i=1; i <=6 ;i++){
+            for(var j=1; j<=i;j++){
+                document.write("*")
+            }
+            document.write("<br>");
+        }
+    
+    </script>
+
+    <h2>作業10</h2>
+    <script>
+                
+        for(var i=1; i <=6 ;i++){
+            for(var j=1; j<=i;j++){
+                document.write("*");
+            }
+            document.write("<br>");
+            
+        }
+        for(var i=5; i >=1; i--){
+            // document.write(i,"數字<br>");
+            for(var j=1; j <= i; j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h2>作業11: (巢狀迴圈練習)  </h2>
+    <script>
+        for(var i=1 ;i <=6 ;i++){
+            for(var j=1; j<=i; j++){
+                document.write(j)
+            }
+            document.write("<br>")
+        }
+    </script>
+    <h2>作業12:(巢狀迴圈練習) </h2>
+    <script>
+
+        var sum = 0;
+        for(var i = 1 ;i <=10 ;i++){
+            sum +=i;
+            for(var j=1; j <= i; j++){
+                document.write(j)
+                if(i === j ){
+                    break;
+                }
+                document.write("+")
+            }
+            document.write("=",sum)
+            document.write("<br>")
+        }
+
+    </script>
+
+            
+</body>
+</html>

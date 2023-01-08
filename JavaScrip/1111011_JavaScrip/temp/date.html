@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+
+</head>
+<body>
+
+<div>現在時刻 : <span id="timePanel"></span></div>	
+
+<script>
+</script>  
+
+<h2>時間</h2>
+<script>
+    //----------------ex1 ,	早安~<br> 午安~<br> 晚安~<br>
+    var today = new Date();
+    document.write("today：",today,"<br>");
+    var hh = today.getHours();
+
+    //練習getHours()
+    document.write("hh：",hh,"<br>")
+    if(hh<12){
+        document.write("早安~<br>")
+    }else if(hh<18){
+        document.write("午安~<br>")
+    }else {
+        document.write("晚安~<br>")
+    }
+</script>
+
+
+
+
+ 
+
+
+<h2>時間</h2>
+<script>
+    //-----------------ex2, 追追追
+    var today = new Date();
+    document.write("today：",today,"<br>");
+    var hh = today.getHours();
+
+    //練習getHours()
+    document.write("hh：",hh,"<br>")
+    if(hh<12){
+        document.write("早安~<br>")
+    }else if(hh<18){
+        document.write("午安~<br>")
+    }else {
+        document.write("晚安~<br>")
+    }
+</script>
+<h2>日期 星期</h2>
+
+
+    <script>
+        //-----------------ex3, 電子時鐘
+        var birthday = new Date(1997, 0,18);
+        var weekDay = "日一二三四五六"
+        document.write("XX在星期",weekDay.charAt(birthday.getDay()),"生日<br>") 
+    </script>
+
+    <script>
+        var birthday = new Date(1997, 0,18);
+        var weekDay = "日一二三四五六"
+        var weekDayEn=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+        document.write("XX在",weekDayEn[birthday.getDay()],"生日<br>") 
+        document.write("birthday.toString()",birthday.toString(),"<br>")
+    </script>
+    <h2>電子時鐘</h2>
+    <script>
+        function showTime(){
+            let now = new Date();
+            document.querySelector("#timePanel").innerText = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}` ;
+
+
+        }
+        window.addEventListener("DOMContentLoaded",function(){
+            showTime(); //自己呼叫他來執行
+            setInterval(showTime,1000);
+        })
+
+        //setInterval(指定程式,間隔時間)
+        //設定指定的程式,經過間隔時間之後會被週期性地重覆被執行(時間單位:毫秒,會傳回計時器編號)
+    </script>
+</body>
+</html>

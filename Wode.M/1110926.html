@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wode.M</title>
+    <link rel="stylesheet" href="../css_reset.css">
+    <style>
+/* 首頁-選單共用 */
+        .header{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #8C2121;
+            position: relative;
+            position: sticky;
+            top: 0;
+            /* margin-bottom: 20px; */
+        }
+        .logo img{
+            vertical-align: top;
+        }
+
+        .main-nav a{
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+        }
+        #menu-switch{
+            display: none;
+        }
+
+/* benner共用 */
+        .benner .pic img{
+            vertical-align: top;
+            width: 100%;
+        }
+        .benner{
+            position: relative;
+            z-index: 0;
+        }
+        .benner .icon-newshop{
+            background-color: #E3CA95;
+            width: fit-content;
+            border-radius: 5px;
+            padding: 5px 10px;
+            border: 1px solid #666;
+            position: absolute;
+            top:50%;
+            left: 50%;
+        }
+
+        
+
+
+
+
+        /* 手機版本 */
+        @media screen and (max-width:767px) {
+        /* 手機版本-選單 */
+            .main-nav{
+                /* display: none; */
+                position: absolute;
+                background-color: brown;
+                width: 100%;
+                left: -100%;
+                top: 100%;
+                opacity: 0;
+                transition: opacity 1s 0s,
+                            left    1s 1s;
+                z-index: 10;
+            }
+
+            .hb{
+                width: 40px;
+                height: 40px;
+                background-color: #666;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                position: relative;
+            }
+            .hb span{
+                width: 32px;
+                height: 2px;
+                background-color: #000;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                opacity: 1;
+                transform: rotate(0deg);
+
+            }
+            .hb span:nth-child(1){
+                top: 7px;
+                transition: transform 1s 0s ,top 1s 1s;
+            }
+            .hb span:nth-child(2){
+                top: 0;
+                bottom: 0;
+                transition: opacity 1s 2s;
+                
+            }
+            .hb span:nth-child(3){
+                top: 31px;
+                transition: transform 1s 0s ,top 1s 1s;
+            }
+
+            #menu-switch:checked + .header .main-nav{
+                /* display: block; */
+                left: 0;
+                opacity: 1;
+                transition: opacity 1s;
+            }
+            #menu-switch:checked + .header .hb span:nth-child(2){
+                /* display: none; */
+                opacity: 0;
+                transition: opacity 1s ;
+
+
+                    
+            }
+            #menu-switch:checked + .header .hb span:nth-child(1){
+                top: 19px;
+                transform: rotate(45deg);
+                transition: top 1s 0s ,transform 1s 1s;
+                
+            }
+
+            #menu-switch:checked + .header .hb span:nth-child(3){
+                top: 19px;
+                transform: rotate(-45deg);
+                transition: top 1s 0s ,transform 1s 1s;
+            }
+
+        }
+        /* 平板版本 */
+        @media screen and (min-width:768px) {
+            .hb{display: none;}
+            .main-nav{
+                display: flex;
+                /* position: relative; */
+                width: fit-content;
+                /* background-color: transparent; */
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-switch">
+    <div class="header">
+        <!-- logo -->
+        <div class="logo">
+            <img src="../pic/logo.png">
+        </div>
+
+        <!-- 漢堡 -->
+        <label for="menu-switch" class="hb">  
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        
+        <!-- 選單 -->
+        <nav class="main-nav">
+            <a href="#">選購泳衣</a>
+            <a href="#">Wode.M地圖探索</a>
+            <a href="#">挑選指南</a>
+            <a href="#">關於我們</a>
+            <a href="#">
+                <img src="../pic/icon/Vector.png" alt="">
+            </a>
+            <a href="#">
+                <img src="../pic/icon/🦆 icon _person_.png" alt="">
+            </a>
+        </nav>
+    </div>
+
+
+
+    <div class="benner">
+        <div class="pic">
+            <img src="../pic/benner/banner.png" alt="benner">
+        </div>
+        <div class="icon-newshop">
+            新品上市
+        </div>
+    </div>
+
+
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi cumque reiciendis! Repudiandae ipsum fuga quas animi, exercitationem dolore, expedita eaque quos minima unde atque, mollitia provident ipsam explicabo. Reprehenderit dolore corrupti nam quia omnis velit consequatur, tempore quo culpa eligendi impedit, ratione quae ab accusantium ipsa fuga exercitationem adipisci?</p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Slider use jQuery</title>
+	<link rel="stylesheet" href="./28_main.css">
+	<script src="./js/jquery-3.6.1.js"></script>
+	<script src="./29_new.js"></script>
+	<style>
+		textarea{
+			width: 200px;
+			height: 200px;
+
+		}
+	</style>
+	<script>
+		$(function(){
+			$('textarea').scroll(function(){
+				// step1
+				// $('#feedback').text(`You have scrolled`)
+
+				// step2 scrollTop():內部資料超過容器的高度(px)
+				// let scroll_top = $(this).scrollTop()
+				// $('#feedback').text(`You have scrolled,and are at potition ${scroll_top}`)
+
+				// step 3 加入css之後
+				let scroll_top = $(this).scrollTop()
+				$('#feedback').text(`You have scrolled,and are at potition ${scroll_top}`)
+
+
+			})
+		})
+	</script>
+</head>
+<body>
+	<textarea name="" id="" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, incidunt modi. Cumque animi ipsum vitae, aliquam ad repudiandae eveniet impedit veritatis consequatur sapiente ducimus, eius dolorum, nulla quod a alias vero iure voluptates dolores modi mollitia. Quae soluta totam, laudantium nobis provident nihil deserunt odit mollitia officia amet enim, esse nostrum quis velit, molestiae aut dolore. Consequuntur, dolorum. Illum aut doloremque alias consectetur sed fuga nam, tempore, sapiente aliquid, libero ratione reiciendis dolores eius exercitationem architecto sequi? At distinctio animi reiciendis, non voluptates blanditiis consectetur deserunt molestias exercitationem voluptatem aspernatur rem placeat quam vero velit dicta nihil. Ad, perferendis nihil?</textarea>
+
+	<p id="feedback"></p>
+
+</body>
+
+</html>

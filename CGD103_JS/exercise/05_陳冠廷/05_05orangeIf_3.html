@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>05</h2>
+    <script>
+        let level;
+        level = "2";
+        let weight;
+        weight = 40;
+        let pricePerKilogram;
+
+        switch(level) {
+            case "1":
+                if(weight < 40) {
+                    pricePerKilogram = 30;
+                } else if(weight >= 40 && weight < 100) {
+                    pricePerKilogram = 25;
+                } else if(weight >= 100) {
+                    pricePerKilogram = 20;
+                }
+            break;
+            case "2":
+                if(weight < 40) {
+                    pricePerKilogram = 25;
+                } else if(weight >= 40 && weight < 100) {
+                    pricePerKilogram = 20;
+                } else if(weight >= 100) {
+                    pricePerKilogram = 15;
+                }
+            break;
+            case "3":
+                if(weight < 40) {
+                    pricePerKilogram = 20;
+                } else if(weight >= 40 && weight < 100) {
+                    pricePerKilogram = 15;
+                } else if(weight >= 100) {
+                    pricePerKilogram = 10;
+                }
+        }
+
+        var totalPrice = weight * pricePerKilogram;
+        document.write(`You gotta pay $ ${totalPrice} to buy it!`);
+    </script>
+</body>
+</html>

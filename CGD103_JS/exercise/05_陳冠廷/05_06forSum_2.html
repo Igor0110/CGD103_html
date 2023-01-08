@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   
+   <h2>作業06</h2>
+   <script>
+      var positiveInterger = 10;
+      var sum = 0;
+      var sumOdd = 0;
+      var sumEven = 0;
+      for(var i = 1; i <= positiveInterger; i++) {
+         if(i % 2 != 0) {
+            sumOdd += i;
+         } else{
+            sumEven += i;
+         }        
+      }
+      sum = sumOdd + sumEven;
+
+      document.write(`From 1 add up to ${positiveInterger} is ${sum}<br>`);
+      document.write(`Odd sum from 1 add up to ${positiveInterger} is ${sumOdd}<br>`);
+      document.write(`Even sum from 1 add up to ${positiveInterger} is ${sumEven}<br>`);
+   </script>
+
+</body>
+</html>

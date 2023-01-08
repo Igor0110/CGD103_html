@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let level=4;
+        let weight=45;
+        let price=0;
+
+        switch(level){
+            case 1:
+                if (weight>=100) price=20*weight;
+                else if (weight>=40) price=25*weight;
+                else price=30*weight;
+                break;
+            case 2:
+                if(weight>=100) price=15*weight;
+                else if (weight>=40) price=20*weight;
+                else price=25*weight;
+                break;
+            case 3:
+                if(weight>=100) price=10*weight;
+                else if (weight>=40) price=15*weight;
+                else price=20*weight;
+                break;
+            default:
+                document.write("你拿的那個不用錢<br>");
+                break;
+        }
+
+        document.write("總共",price,"元");
+        </script>
+</body>
+</html>

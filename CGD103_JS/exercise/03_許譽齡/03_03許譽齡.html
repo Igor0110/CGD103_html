@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>設定變數存放橘子一斤的單價，及購買的斤數，並算出小計為何,若消費金額超過500元, 則打九折。</h2>
+</body>
+<script>
+    var price = 50;
+    var quanitity = 10;
+    var total = price * quanitity;
+    if(total >=500){
+        total = total * 0.9;
+        // document.write("小計:", total, "<br>"); document.write要放在if裡還是外面
+    } 
+    document.write("小計:", total, "<br>");
+</script>
+</html>

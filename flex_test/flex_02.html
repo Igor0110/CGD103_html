@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .box{
+        width: 1000px;
+        height: 800px;
+        border: 6px solid red;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .item{
+        height: 200px;
+        width: 500px;
+
+        /* flex-basis: 0px; */
+    }
+    .item::first-letter{
+        font-size: 30px;
+    }
+    .item1{
+        background-color: #aaf;
+        /* flex-grow: 1; */
+        flex-shrink: 0;
+    }
+    .item2{
+        background-color: #afa;
+        /* flex-grow: 1; */
+        flex-shrink: 1;
+    }
+    .item3{
+        background-color: #faa;
+        /* flex-grow: 2; */
+        flex-shrink: 1;
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+        <div class=" item item1">
+            1 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque illo saepe. Quae mollitia molestiae suscipit, quod cumque .
+        </div>
+        <div class=" item item2">
+            2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque illo saepe. Quae mollitia molestiae suscipit, quod cumque .
+        </div>
+        <div class=" item item3">
+            3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque illo saepe. Quae mollitia molestiae suscipit, quod cumque .
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+ 
+</head>
+
+<body>
+    
+<h4>事件處理器</h4>
+
+<p>物件. addEventListener (事件名稱,事件處理器, useCapture)
+    – 使用addEventListener可以讓同一事件，有多個事件處理器
+    – useCapture:可以設定事件處理程序是在捕捉階段執行或氣泡階段執行(參閱後面[事件
+    的蔓延現象]課題)
+    • true為capture階段
+    • false為bubble階段
+</p>
+    <script>
+
+
+        function showAns(){
+            var  a = 10; 
+            var b = 20; 
+            window.alert(a + b);
+        }
+        function showSmile(){
+            window.alert(">_____________________^")
+            btns[2].removeEventListener("click",showSmile,false)
+        }
+        function noAns(){
+            window.alert("不告訴你~")
+        }
+
+        let btns;
+        function init(){
+            // let btns = document.getElementsByName("btn");
+            btns = document.getElementsByName("btn");
+            btns[1].onclick = showAns;  //showAns 不可以寫 showAns()  因為()表示 一進入網站 直接執行 
+            btns[1].onclick = noAns;  
+            // 方法二
+            btns[2].addEventListener("click",showAns,false);//可以針對不同狀況加入或是移除 事件處理器
+        
+            btns[2].addEventListener("click",showSmile,false);
+        }
+
+        window.addEventListener("load",init ,true) //瀏覽器下載完畢時才去呼叫init函式來執行。
+        
+    
+    </script> 
+
+
+<input type="button" name="btn" value="10+20=?[0]" onclick="showAns()">&nbsp;&nbsp;
+<input type="button" name="btn" value="10+20=?[1]">&nbsp;&nbsp;
+<input type="button" name="btn" value="10+20=?[2]">&nbsp;&nbsp;  
+
+
+
+
+</body>
+</html>

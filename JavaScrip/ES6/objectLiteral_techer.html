@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>object literal</title>
+<style>
+	h2 {
+		color: blue;
+	}
+</style>
+</head>
+
+<body>
+
+<script type="text/javascript">
+//看起來空空的陣列(物件)
+var arr = new Array();
+var arr = [];
+
+//有較多內容的陣列
+var arr = new Array(11, 22);
+var arr = [11, 22];
+
+//看起來空空的物件
+var obj = new Object();//{} obj.toString() --> [object Object] //------------
+document.write('obj.name : ' , obj.name ,"<br>");
+document.write(  "<hr>");
+// //---------有較多內容的物件--------------1
+var emp = new Object();
+emp.empno = 7001;
+emp.name = "Ann";
+document.write('emp.empno : ' , emp.empno ,"<br>");
+document.write('emp.name : ' , emp.name ,"<br>");
+document.write(  "<hr>");
+
+//object literal有較多內容及方法的物件--------------2_1
+var emp2={
+	empno : 7002 ,
+	name : "Alice"
+}
+document.write('emp2.empno : ' , emp2.empno ,"<br>");
+document.write('emp2.name : ' , emp2.name ,"<hr>");
+
+var empno = 7003; //empno = parseInt(document.getElementById("empno").value);
+var name = "John";
+var emp2={
+	empno: empno,
+	name : name
+}
+document.write('emp2.empno : ' , emp2.empno ,"<br>");
+document.write('emp2.name : ' , emp2.name ,"<hr>");
+/**/
+//????? method
+
+//---------ES6的簡化版的物件表示法--------------
+var empno = 7004;
+var name = "Mary";
+var emp3 = {empno, name}
+document.write('emp3.empno : ' , emp3.empno ,"<br>");
+document.write('emp3.name : ' , emp3.name ,"<hr>");
+//????? method
+
+
+//object literal有較多內容及方法的物件--------------
+var emp2={
+	empno : 7002 ,
+	name : "Alice",
+	phone : ["03-4257387","03-168168","0933168168"]
+}
+
+document.write('emp2.empno : ' , emp2.empno ,"<br>");
+document.write('emp2.name : ' , emp2.name ,"<br>");
+document.write('emp2.phone[2] : ' , emp2.phone[2] ,"<br>");
+document.write('emp2.phone : ' , emp2.phone ,"<hr>"); //emp2.phone.toString();
+
+
+//object literal有較多內容及方法的物件--------------
+var emp2={   //new Object()--> toString() ->[object Object]
+	empno : 7002 ,
+	name : "Alice",
+	phone : {
+		O:"03-4257387",
+		H:"03-168168",
+		M:"0933168168"
+	}, //Object
+	toString:function(){
+		return "[I am an Employee]";
+	}, //Object
+	smile(){
+		document.write(  "show smile<br>");
+	}
+}
+
+document.write('emp2.empno : ' , emp2.empno ,"<br>");
+document.write('emp2.name : ' , emp2.name ,"<br>");
+
+document.write('emp2.phone.H : ' , emp2.phone.H ,"<br>"); //03-168168
+
+document.write('emp2.phone["H"] : ' , emp2.phone["H"] ,"<br>"); 
+for(let x in emp2.phone){
+	document.write('emp2.phone[x] : ' , emp2.phone[x] ,"<br>"); 	
+}
+document.write('emp2.phone : ' , emp2.phone ,"<hr>"); //emp2.phone.toString()->[object Object]
+
+document.write( emp2, "<br>"); //emp2.toString();
+emp2.smile();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>String</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var str="abcdeabcde";
+
+var obj = new String("abcde");
+
+document.write("typeof str : ", typeof str, "<br>");
+document.write("typeof obj : ", typeof obj, "<br>");
+
+document.write("length : " , str.length, "<br>"); //10
+document.write("toUpperCase() : " , str.toUpperCase(), "<br>"); //ABCDEABCDE, 不會改變原字串的內容 
+document.write("str : ", str, "<br>"); //abcdeabcde
+
+document.write("indexOf('cd') : " , str.indexOf("cd"), "<br>");  //2
+document.write("indexOf('cdd') : " , str.indexOf("cdd"), "<br>");//-1, 找不到 
+
+document.write("lastIndexOf('cd') : " , str.lastIndexOf('cd'), "<br>"); //7
+document.write("lastIndexOf('cdd') : " , str.lastIndexOf('cdd'), "<br>"); //-1
+
+document.write("match('cd') : " , str.match('cd'), "<br>"); //cd
+document.write("match('cdd') : " , str.match('cdd'), "<br>"); //null
+
+document.write("charAt(3) : " , str.charAt(3), "<br>");  //d :A41234566
+document.write("charCodeAt(3) : " , str.charCodeAt(3), "<br>"); //100 
+
+//abcdeabcde
+document.write("substr(2,5) : " , str.substr(2,5), "<br>"); //cdeab
+document.write("substring(2,5) : " , str.substring(2,5), "<br>");//cde
+
+document.write("substr(2,50) : " , str.substr(2,50), "<br>"); //cdeabcde
+document.write("substr(2) : " , str.substr(2), "<br>"); //cdeabcde
+
+document.write("replace('de','QQQ') : " , str.replace('de','QQQ'), "<br>"); 
+document.write("replace(/de/g,'QQQ') : " , str.replace(/de/g,'QQQ'), "<br>"); 
+document.write(  "<hr>");
+//-------------------
+str = "aa,bb,cc:dd,ee,ff";
+var arr = str.split(",");
+for(let data of arr){
+	document.write( data, "<br>");
+}
+
+document.write(  "<hr>");
+//--------------------
+str = "abcdeabcde";
+var arr = str.split("");
+for(let data of arr){
+	document.write( data, "<br>");
+}
+document.write(  "<hr>");
+//--------------------
+//反轉字串後輸出
+str = "Hello~"; //~olleH
+//先轉成陣列, 再反轉, 再串接起來
+//["H","e","l","l","o","~"];
+
+//["~","o","l","l","e","H",]
+
+//"~olleH"
+document.write( "反轉後 : ", str.split("").reverse().join(""), "<br>");
+
+document.write(  "<hr>");
+//--------------------
+//檔案全名
+let fileStr = "sara.smile.pptx";//
+
+//取出主檔名, 副檔名;
+let fileName, fileExt;
+let dot = fileStr.lastIndexOf(".");
+fileName = fileStr.substring(0, dot);//sara.smile
+fileExt = fileStr.substr(dot+1);
+document.write("fileName : ", fileName, "<br>");
+document.write("fileExt : ", fileExt, "<br>");
+
+//副檔名必須是 bmp, png, gif, ico 其中之一, 檔案格式才被接受
+let allowed = ["bmp", "png", "gif", "ico"];
+if(allowed.indexOf(fileExt) == -1){//找不到
+	document.write(  `${fileStr}檔案格式不合<br>`);
+}else{
+	document.write(  `${fileStr}檔案格式OK<br>`);
+}
+</script>   
+
+
+</body>
+</html>

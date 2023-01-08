@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <me ==ta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 span{
+            color: red;
+        }
+
+    </style>
+
+    <script src="../web_CGD103/JQuery/js/jquery-3.6.1.js"></script>
+</head>
+<body>
+    <h1>Hellow <span>Word!</span></h1>
+    <img class="white" src="./HYPECOP。_files/14.jpg" alt="白鞋">
+    <script>
+        $('h1').html("new <span>content</span>")
+        $('img').attr("src","./HYPECOP。_files/29.jpg")
+        $('img').attr("alt","橘鞋")
+        let picalt = $('img').attr('alt');
+        console.log(picalt)
+
+    </script>
+</body>
+</html>

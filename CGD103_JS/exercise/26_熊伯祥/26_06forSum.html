@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var i = 10;
+      document.write("設一變數（正整數）為 " + i + "<br>");
+      var sum = 0;
+      var oddSum = 0;
+      var evenSum = 0;
+      for (var j = 1; j <= i; j++) {
+        sum = sum + j;
+      }
+      for (var k = 1; k <= i; k += 2) {
+        oddSum = oddSum + k;
+      }
+      for (var l = 0; l <= i; l += 2) {
+        evenSum = evenSum + l;
+      }
+      document.write("1 至 " + i + " 之總和為 " + sum + "<br>");
+      document.write("1 至 " + i + " 間之奇數和為 " + oddSum + "<br>");
+      document.write("1 至 " + i + " 間之偶數和為 " + evenSum + "<br>");
+    </script>
+  </body>
+</html>

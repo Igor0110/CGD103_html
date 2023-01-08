@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>作業01</h2>
+    <script>
+        var price = "22";
+        var subtotal = price*2
+        document.write ("兩斤橘子價格-subtotal:", subtotal , "<br>")
+    </script>
+
+    <h2>作業02</h2>
+    <script>
+        
+        var time = 8000;
+        var second = time % 60;
+        var minutes = parseInt(time/60);
+        var hr = parseInt(minutes / 60);
+
+        minutes = minutes % 60;
+        document.write("hr:",hr,"<br>");
+        
+        document.write( "minutes: ",minutes ,"<br>"); 
+         
+        
+        document.write("second:",second,"<br>");
+        document.write(`${hr}小時，${minutes}分鐘，${second}秒`)
+    </script>
+
+
+    <h2>作業03</h2>
+    <script>
+        var pr =500;
+        var quantity =2; 
+        var subtotal = pr * quantity;
+        if (subtotal >= 500){
+            subtotal = subtotal*0.9
+        }
+        document.write ("橘子價格-subtotal:", subtotal , "<br>")
+    </script>
+
+    <h2>作業04</h2>
+    <script>
+       var pr =500
+        var quantity =2 
+        var subtotal = pr * quantity
+        if (subtotal >= 1000){
+            subtotal = subtotal*0.7
+        }else if( subtotal >= 500){
+            subtotal =subtotal*0.9
+        }
+        document.write ("橘子價格-subtotal:", subtotal , "<br>")
+    </script>
+
+    <h2>作業05</h2>
+    <script>
+        var leave = 1
+        var quantity = 40
+        
+
+        if( quantity >= 100){
+            if (leave === 1 ){
+                price = 20;
+            }else if(leave === 2){
+                price = 15;
+            }else if( leave === 3){
+                price = 10;
+            }
+        
+        }else if ( quantity >= 40){
+            if (leave === 1 ){
+                price = 25;
+            }else if(leave === 2){
+                price = 20;
+            }else if( leave === 3){
+                price = 15;
+            }
+
+        }else if( quantity < 40){
+            if ( leave === 1){
+                price = 30;
+            }else if (leave === 2){
+                price = 25;
+            }else if (leave === 3){
+                price = 20;
+            }
+        }
+
+
+        subtotal = quantity * price
+        document.write( "橘子", subtotal ,"<br>")
+    </script>
+</body>
+</html>

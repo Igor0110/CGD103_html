@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h2>作業07 摸彩10次 可以把球放回去</h2>
+    <p>摸彩金 : 有11顆彩球, 彩球面額為0-10之間,</p>
+    <p>可以摸彩10次, 印出其每次的摸彩金額及最</p>
+    <p>後的彩金總金額(單位:佰元)</p>
+    <script>
+        
+        var number;
+        var sum = 0;
+
+        for(var i = 1;i <= 10; i++){
+            number = Math.floor(Math.random()*11);
+            document.write("第",i,"次，抽到",number,"單位(佰元)<br>")
+            sum += number;
+        }
+        document.write("總共收到金額",sum,"單位(佰元)<br>")
+    </script>
+
+
+    <h2>作業08 摸彩10次 可以把球放回去 若抽到0元結束抽獎</h2>
+    <p>摸彩金 : 有11顆彩球, 彩球面額為0-10之間, </p>
+    <p>若摸到的彩球不為0,則可繼續摸彩,若摸到的彩球為0,</p>
+    <p>則停止摸彩,並計算其摸彩次數及彩金總金額(單位:佰元) </p>
+    <script>
+        var count = 0;
+        var number;
+        var sum = 0;
+        
+        do{  
+            number = Math.floor(Math.random()*11);//摸彩
+            count++;//次數
+            document.write("第",count,"次，抽到",number,"單位(佰元)<br>")
+            sum += number;  //number:0
+        }while(number != 0);
+
+        document.write("總共收到金額",sum,"單位(佰元)<br>")
+    </script>
+
+   
+
+            
+</body>
+</html>

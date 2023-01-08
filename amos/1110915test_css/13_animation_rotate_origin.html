@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bell{
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            /* transform-origin: cent end; */
+        }
+        .bell img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .bell:hover{
+            animation: rr .1s linear alternate infinite,
+                       tt .3s linear alternate infinite;
+        }
+        @keyframes rr {
+            0%{
+                transform: rotate(-30deg);
+            }
+            100%{
+                transform: rotate(30deg);
+            }
+        }
+        @keyframes tt{
+            0%{
+                top:0;
+            }
+            100%{
+                top: 80px
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bell">
+         <img src="https://th.bing.com/th/id/OIP.xNkZr_WxhlbWEv83-2sDPwHaJ7?pid=ImgDet&rs=1" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../normalize.css">
+    
+    <style>
+        .menu{
+            width: 100%;
+            background-color: antiquewhite;
+            display: flex;
+            height: 60px;
+            justify-content: space-around;
+        }
+        .logo img{
+            width: 60px;
+            height: 60px;
+            vertical-align: center;
+        
+        }
+        .nav-main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-main > li{
+            list-style: none;
+            padding: 0px 15px;
+
+        }
+
+        .nav-main > li > a{
+            background-color: #aaa;
+            color: inherit;
+            text-decoration: none;
+        }
+        .nav-main > li >a:hover{
+            background-color: blue;
+        }
+
+        .nav-foot{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: right;
+            
+        }
+        .nav-foot > a >img{
+            width: 40px;
+            height: 40px;
+            vertical-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+        <nav class="menu">
+            <a href="#" class="logo">
+                <img src="https://picsum.photos/300/200/?random=10">
+            </a>
+            <ul class="nav-main">
+                <li class="shop">
+                    <a href="#">選購泳衣</a>
+                </li>
+                <li class="map">
+                    <a href="#">地圖探索</a>
+                </li>
+                <li class="picking">
+                    <a href="#">挑選指南</a>
+                </li>
+                <li class="aboutus">
+                    <a href="#">關於我們</a>
+                </li>
+            </ul>
+            <div class="nav-foot">
+                <a href="#" class="mamber">
+                    <img src="https://picsum.photos/300/200/?random=10" alt="會員管理">
+                </a>
+                <a href="#" class="shopping-cart" >
+                    <img src="https://picsum.photos/300/200/?random=10" alt="購物車">
+                </a>
+            </div>
+        </nav>
+
+        <!-- 首頁-新品上市 -->
+        <div class="front-pag enew-commodity"> 
+        </div>
+
+        <!-- 首頁-熱賣商品 -->
+        <div class="front-pag selling-commodity">
+        </div>
+
+        <!-- 首頁-潛水穿搭 -->
+        <div class="front-pag diving-outfit">
+            <div>
+                <div class="diving-title">
+                    <p>潛水穿搭</p>
+                </div>
+                <div class="diving-mainpic">
+                    <img src="../pic/diving/diving mainpic.png" alt="">
+                </div>
+            </div>
+            <div class="description-group">
+                <div class="diving-product">
+                    <p>Orca 歐卡 / 挖腰連身泳裝</p>
+                </div>
+                <div>
+                    <div>
+                        <p>設計靈感來自外型極具辨識度的「 Orca 虎鯨 」</p>
+                        <p>仿生設計的獨特曲線，不規則挖腰剪裁</p>
+                        <p>搭配雙線交叉的肩帶，加強水下穩定度</p>
+                        <p>經典微丁美臀版型，讓背部曲線更漂亮</p>
+                        <p>每個角度都有不同的獨特樣貌！</p>    
+                    </div>
+                    <div class=>
+                        <a class="go-shop">
+                            查看現貨連身款
+                        </a>
+                        <a class="buyit">
+                            加入購物車
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="diving-thumbnail">
+                        <img src="../pic/diving/divingpic.png" alt="">
+                    </div>
+                    <div class="diving-thumbnail">
+                        <img src="../pic/diving/divingpic2.png" alt="">
+                    </div>
+                    <div class="diving-thumbnail">
+                        <img src="../pic/diving/divingpic3.png" alt="">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nesciunt a assumenda perferendis, eos minima quam fuga veniam id ipsum non dolore. Possimus pariatur suscipit obcaecati, similique earum dignissimos eveniet!
+</body>
+</html>

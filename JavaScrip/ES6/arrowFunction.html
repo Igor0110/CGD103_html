@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+//===1 匿名函數
+var getArea = function (radius){
+	return radius*radius*3.14;
+}
+document.write("<p>半徑1的圓面積 : ", getArea(1), "</p>");
+
+
+//===2 可以改寫成箭頭函數
+//省略function關鍵字, 改用箭頭指向所需執行的敍述區塊
+
+getArea2 = (radius)=>{
+	return radius*radius*3.14;
+}
+document.write("<p>半徑10的圓面積 : ", getArea2(10), "</p>");
+//===3 箭頭函數的簡略寫法 
+//若只要執行一行敍述，且該敍述的目的是回傳一個值，
+//則{}和return可以省略
+getArea3 = (radius)=>radius*radius*3.14;
+
+document.write("<p>半徑100的圓面積 : ", getArea3(100), "</p>");
+
+//===4 箭頭函數的簡略寫法
+//參數列若只有一個參數，則左邊的()可以省略
+getArea4 = radius =>radius*radius*3.14;
+
+document.write("<p>半徑1000的圓面積 : ", getArea4(1000), "</p>");
+
+
+//===5 箭頭函數的簡略寫法
+//若没有參數，則左邊的()不可以省略
+
+showSmile = ()=>document.write("smile...<br><hr>");
+showSmile();
+
+//搭配預設參數
+sayHi = (msg = "Hi......") =>document.write(msg,".....<br>");
+sayHi("Hello~")
+sayHi();
+document.write("<hr>")
+</script>    
+<h2>sort ....搭配匿名函式</h2>
+<script>
+	
+	var arr = [40,20,40,70,30,80,7];
+	
+	arr.sort(function(a,b){
+		return a-b;
+	});
+	document.write(arr,"<br>","<hr>");
+</script>
+
+<h2>sort ....搭配箭頭函式</h2>
+<script>
+	
+	var arr = [40,20,40,70,30,80,7];
+	
+	arr.sort((a,b)=> a-b);
+	document.write(arr,"<br>","<hr>");
+</script>
+<h2>forEach ....搭配箭頭函式 方法2 </h2>
+<script>
+	
+	var arr = [11,22,33];
+
+	arr.forEach(data=>document.write(data,"<br>"));
+
+	document.write("<hr>");
+</script>
+<h2>map()....搭配function函式 </h2>
+<script>	
+	var arr = [11,22,33];
+	// function函式
+	var arr2 = arr.map(function(data){
+		return data*2;
+	})
+	document.write(arr2,"<br>")
+	document.write("<hr>")
+
+</script>
+<h2>map()....搭配箭頭函式 方法</h2>
+<script>
+	var arr = [11,22,33];
+	// 箭頭函式
+	var arr2 = arr.map(data=>data*2)
+	document.write(arr2,"<br>")
+
+	document.write("<hr>")
+
+
+</script>
+
+<h2>filter() ....搭配function函式</h2>
+<script>
+	var arr = [11,22,33];
+	var arr2 = arr.filter(function(data){
+		return data*2 >30;
+	})
+	document.write(arr2,"<hr>");
+</script>
+<h2>filter() ....搭配箭頭函式</h2>
+<script>
+	var arr = [11,22,33];
+	var arr2 = arr.filter(data=>data*2 >30)
+
+	document.write(arr2,"<hr>");	
+</script>
+
+
+<h2>find() ....搭配箭頭函式</h2>
+<p>找到滿足條件的第1個資料</p>
+<script>
+	var arr = ["書","手機","CD"];
+	var data = arr.find(data =>data == "手機");
+
+	document.write(data,"<hr>");	
+</script>
+
+<h2>find() ....搭配箭頭函式</h2>
+<p>商品找到價格</p>
+<script>
+	var arr = [
+		{pname:"書",price:600},
+		{pname:"手機",price:15000},
+		{pname:"CD",prrice:300}
+	];
+	var dataObj = arr.find(function(data){
+		return data.pname === "手機";
+	} );
+
+	document.write("price:",dataObj.price,"<hr>");
+
+	// var dataObj = arr.find(data=> data.pname === "CD" );
+	// document.write("price:",dataObj.price,"<hr>");	
+</script>
+<h2>find() ....搭配箭頭函式</h2>
+<p>商品找到價格</p>
+<script>
+	var arr = [
+		{pname:"書",price:600},
+		{pname:"手機",price:15000},
+		{pname:"CD",prrice:300}
+	];
+	var dataObj = arr.find(data=> data.pname === "CD" );
+	document.write("price:",dataObj.price,"<hr>");
+</script>
+
+<h2>arrow function return object</h2>
+<script>
+	var getPoint = ()=>({x:10,y:20})
+	var point = getPoint();
+	document.write("point.x:",point.x,"<br>")
+	document.write("point.y:",point.y,"<br>")
+	
+	document.write("<hr>")
+
+</script>
+</body>
+</html>

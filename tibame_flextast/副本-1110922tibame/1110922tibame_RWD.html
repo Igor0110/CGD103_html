@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../grid.css">
+    <style>
+        /* -- 提拔我的學習力   promoted -- */
+        .promoted div span{
+            background-color: #09adbf;
+            color: #fff;
+        }
+        
+        .promoted div .title{
+            font-size: 28px;
+            color: #09adbf;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        /* 從個人到組織   course */
+
+        h2{
+            font-size: 32px;
+            color: #212529;
+        }
+        .promoted-txt{
+            font-size: 18px;
+            text-align: left;
+        }
+        .row{
+            outline: 1px solid red;
+        }
+        .row img{
+            width: 100%;
+        }
+
+
+        .promoted .row img{
+            border-radius: 5px;
+        }
+        .feature-title {
+                font-size: 18px;
+                color: #000000cc;
+                font-weight: 600;
+        }
+        
+        @media screen and (min-width: 768px) {
+        /* -- 提拔我的學習力   promoted -- */    
+            .promoted div .title{
+                text-align: center;
+            }
+            .promoted-txt{
+                text-align: center;
+            }
+
+        /* !-- 從個人到組織   course -- */
+
+            .main-card{
+                flex-direction: column;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .feature-pic{
+                width:100%;
+            }
+            .feature-txt{
+                width: 100%;
+                font-size: 16px;
+            }
+
+        /* new-arrrial 最新課程------------------- */
+
+            .course-item{
+                max-width: 150px;
+            }
+            /* 課程卡片 */
+            .course-card-group{
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .card-group{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+                border-radius: 10px;
+            }
+            /* 最新課程圖片 */
+            .course-pic{
+                width: 100%;
+            }
+            /* 最新課程內容 */
+            .course-content{
+                width: 100%;
+            }
+            
+        }
+        @media screen and(min-width:1025px){
+            
+        }
+        
+
+        .course-card-txt p{
+            font-size: 18px;
+        }
+        .course-card-txt span{
+            font-size: 32px;
+            color: #09adbf;
+            font-weight: bold;
+        }
+        .course-txt .row .col-12 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+/* new-arrrial 最新課程------------------- */
+        .new-arrival{
+            padding: 45px 0px;
+        }
+        .new-class{
+            text-align: center;
+            padding-top:40px;
+        }
+        .course-sorts{
+            margin: 30px 0px;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .card-group{
+            border-bottom: 1px solid rgba(0,0,0,.1);
+            
+        }
+        .course-item{
+            flex-grow: 1;
+            background-color: #fff;
+            color: #212529;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            text-align: center;
+            padding: 10px;
+        }
+        .course-sorts :first-child{
+            background-color: #14bdcc;
+            color: #fff;
+        }
+        
+        .more-course{
+            text-align: center;
+            font-size: 16px;
+            color: #09adbf;
+        }
+        .course-title{
+            font-size: 16px;
+            color: #212529;
+            font-weight: 600;
+        }
+        .course-location{
+            color: #09adbf;
+            font-weight: 600;
+
+        }
+        .course-location span{
+            font-size: 12px;
+            color: #00000073;
+        }
+        .course-time{
+            color: #00000099;
+            font-size: 12px;
+        }
+        .course-price{
+            color: #09adbf;
+            font-size: 16px;
+            text-align: right;
+        }
+        .course-price span{
+            font-size: 12px;
+        }
+    /* 精選文章 */
+
+        .artilcle-pic img{
+            width: 100%;
+            height: 100%;
+        }
+        .artilcle-tag{
+            font-size: 12px;
+            color: #09adbf;
+        }
+        .artilcle-title > a{
+            font-size: 16px;
+            text-decoration: none;
+            color: #000000cc;
+            
+        }
+        .artilcle-content{
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 提拔我的學習力   promoted -->
+    <div class="container promoted">
+        <div class="row">
+            <div class="col-12">
+                <div class="title"><span>TibaMe</span>提拔我的學習力 提升職場進爭力</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 promoted-txt">
+                <p>知識的深度決定了你的高度，找回自己的職涯主控權</p>
+                <p>讓TibaMe成為你的職涯教練，從自我成長、職涯規劃、職場技能到產業趨勢洞察，給你一輩子帶的走的職場能力</p>
+                <p>學習不設限，讓改變看得見！</p>
+            </div>
+        </div>
+<!-- 從個人到組織   course -->
+        <div class="row course-card-group">
+            <div class="col-12 col-md-4">
+                <div class="row main-card">
+                    <div class="col-4 feature-pic">
+                        <img src="./Img/TibaMe-feature-img1.png">
+                    </div>
+                    <div class="col-8 feature-txt">
+                        <p class="feature-title">
+                            從個人到組織
+                           </p>
+                        <p>
+                            從個人能力學習到企業人才培訓，精準、高效貼近使用者需求
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="row main-card">
+                    <div class="col-4 feature-pic">
+                        <img src="./Img/TibaMe-feature-img4.png">
+                    </div>
+                    <div class="col-8 feature-txt">
+                        <p class="feature-title">
+                            多元課程選擇，隨時隨地輕鬆學
+                        </p>
+                        <p>
+                            提供線上課程、線下課程、直播課程等多元職業訓練課程，給你最自由彈性的學習選擇
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="row main-card">
+                    <div class="col-4 feature-pic">
+                        <img src="./Img/TibaMe-feature-img3.png">
+                    </div>
+                    <div class="col-8 feature-txt">
+                        <p class="feature-title">
+                            完整的使用者數據分析
+                        </p>
+                        <p>
+                            運用科技提供完整學習體驗，學習成果即時掌握、數據回饋更即時
+                        </p>
+                    </div>
+                </div>
+            </div>
+                        
+
+        </div>
+    </div>
+<!-- 多元領域課程   course-txt -->
+    <div class="container course-txt">
+        <div class="row">
+            <div class="col-12">
+                <h2>多元領域主題課程</h2>
+                <p><span>3</span>大領域<span>9</span>個主題課程</p>
+                <div class=course-card-group>
+                    <P><span>250+</span>位講師及業師 貼身職業培訓</P>
+                    <P><span>300</span>堂 線上線下課</P> 
+                    <p><span>10,000+</span>小時隨時在線</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!-- 最新課程 new-arrival -->
+    <div class="container new-arrival">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="new-class">
+                    最新課程
+                </h3>
+            </div>
+            <div class="col-12 course-sorts">
+                <div class="tech course-item">
+                    科技
+                </div>
+                <div class="work course-item">
+                    職場
+                </div>
+                <div class="lang course-item">
+                    語文
+                </div>
+            </div>
+
+            <div class="new-arrival-group col-12 col-md-6 col-lg-3">
+                <div class="row card-group">
+                    <div class="col-4 course-pic">
+                        <img src="./Img/arrival-pic1.png" alt="AI產品瑕疵檢測-應用CNN物件偵測實作班">
+                    </div>
+                    <div class="col-8 course-content">
+                        <div class="course-title">
+                            AI產品瑕疵檢測-應用CNN物件偵測實作班
+                        </div>
+                        <div class="course-location">
+                            主題課程 / 實體及直播課程
+                            <span>
+                                緯育TibaMe台北中心
+                            </span>
+                        </div>
+                        <div class="course-time">
+                            第十四期 ∙ 2022/11/27 開課
+                        </div>
+                        <div class="course-price">
+                            NT$ 9,600
+                            <span>起</span>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+                <div class="new-arrival-group col-12 col-md-6 col-lg-3">
+                    <div class="row card-group">
+                        <div class="col-4 course-pic">
+                            <img src="./Img/arrival-pic2.png" alt="Amos大師網頁設計課2 |  RWD響應式網頁">
+                        </div>
+                        <div class="col-8 course-content">
+                            <div class="course-title">
+                                Amos大師網頁設計課2 |  RWD響應式網頁
+                            </div>
+                            <div class="course-location">
+                                主題課程 / 實體及直播課程
+                                <span>
+                                    緯育TibaMe台北中心
+                                </span>
+                                <span class="course-time">
+                                    【第2期】Amos大師網頁設計課2 | RWD響應式網頁 ∙ 2022/11/27 開
+                                </span>
+                            </div>
+                            <div class="course-price">
+                                NT$ 6,320
+                                <span>起</span>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="new-arrival-group col-12 col-md-6 col-lg-3">
+                    <div class="row card-group">
+                        <div class="col-4 course-pic">
+                            <img src="./Img/arrival-pic3.png" alt="Git版本控制實戰班">
+                        </div>
+                        <div class="col-8 course-content">
+                            <div class="course-title">
+                                Git版本控制實戰班
+                            </div>
+                            <div class="course-location">
+                                主題課程 / 實體及直播課程
+                                <span>
+                                    緯育TibaMe台北中心
+                                </span>
+                                <span class="course-time">
+                                    Git版本控制實戰班 ∙ 2022/10/22 開課
+                                </span>
+                            </div>
+                            <div class="course-price">
+                                NT$ 5,720
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="new-arrival-group col-12 col-md-6 col-lg-3">
+                    <div class="row card-group">
+                        <div class="col-4 course-pic">
+                            <img src="./Img/arrival-pic4.png" alt="Amos大師網頁設計課1 | 網頁技術入門">
+                        </div>
+                        <div class="col-8 course-content">
+                            <div class="course-title">
+                                
+                            </div>
+                            <div class="course-location">
+                                主題課程 / 實體及直播課程
+                                <span>
+                                    緯育TibaMe台北中心
+                                </span>
+                                <span class="course-time">
+                                    【第1期】Amos大師網頁設計課1 | 網頁技術入門 ∙ 2022/10/23開課
+                                </span>
+                            </div>
+                            <div class="course-price">
+                                NT$ 8,680
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            <div class="col-12">
+                <div class="more-course">
+                    更多課程
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <!-- 精選文章 article -->
+    <div class="container">
+        <div class="row">
+            <h2 class="col-12">
+                精選文章
+            </h2>
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="artilcle-pic">
+                            <img src="./Img/1.png">
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="artilcle-content">
+                            <div class="artilcle-tag">
+                                <span>#職場生捱</span>
+                                <span> #自我成長</span>
+                            </div>
+                            <div class="artilcle-title">
+                                <a href="#">必備邏輯表達能力！3招職場溝通技巧，再複雜的事都能講清楚</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="artilcle-pic">
+                            <img src="./Img/2.png">
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="artilcle-content">
+                            <div class="artilcle-tag">
+                                <span>#職場生捱</span>
+                                <span> #自我成長</span>
+                            </div>
+                            <div class="artilcle-title">
+                                <a href="#">必備邏輯表達能力！3招職場溝通技巧，再複雜的事都能講清楚</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="artilcle-pic">
+                            <img src="./Img/3.png">
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="artilcle-content">
+                            <div class="artilcle-tag">
+                                <span>#職場生捱</span>
+                                <span> #自我成長</span>
+                            </div>
+                            <div class="artilcle-title">
+                                <a href="#">必備邏輯表達能力！3招職場溝通技巧，再複雜的事都能講清楚</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="artilcle-pic">
+                            <img src="./Img/4.png">
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="artilcle-content">
+                            <div class="artilcle-tag">
+                                <span>#職場生捱</span>
+                                <span> #自我成長</span>
+                            </div>
+                            <div class="artilcle-title">
+                                <a href="#">必備邏輯表達能力！3招職場溝通技巧，再複雜的事都能講清楚</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="artilcle-pic">
+                            <img src="./Img/5.png">
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="artilcle-content">
+                            <div class="artilcle-tag">
+                                <span>#職場生捱</span>
+                                <span> #自我成長</span>
+                            </div>
+                            <div class="artilcle-title">
+                                <a href="#">必備邏輯表達能力！3招職場溝通技巧，再複雜的事都能講清楚</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="artilcle-pic">
+                            <img src="./Img/6.png">
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="artilcle-content">
+                            <div class="artilcle-tag">
+                                <span>#職場生捱</span>
+                                <span> #自我成長</span>
+                            </div>
+                            <div class="artilcle-title">
+                                <a href="#">必備邏輯表達能力！3招職場溝通技巧，再複雜的事都能講清楚</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="artilcle-pic">
+                            <img src="./Img/7.png">
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="artilcle-content">
+                            <div class="artilcle-tag">
+                                <span>#職場生捱</span>
+                                <span> #自我成長</span>
+                            </div>
+                            <div class="artilcle-title">
+                                <a href="#">必備邏輯表達能力！3招職場溝通技巧，再複雜的事都能講清楚</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="artilcle-pic">
+                            <img src="./Img/8.png">
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="artilcle-content">
+                            <div class="artilcle-tag">
+                                <span>#職場生捱</span>
+                                <span> #自我成長</span>
+                            </div>
+                            <div class="artilcle-title">
+                                <a href="#">必備邏輯表達能力！3招職場溝通技巧，再複雜的事都能講清楚</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                更多精選文章
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

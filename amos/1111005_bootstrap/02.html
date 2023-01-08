@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            --igorrr-width:300px;
+            width: var(--igorrr-width);
+            height: var(--igorrr-width);
+            background-color: palegreen;
+            padding: 30px;
+            
+        }
+        .child{
+            --child-width:px;
+            width: var(--child-width);
+            height: var(--child-width);
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">kkk
+        <div class="child" style="--child-width:30px"></div>
+    </div>
+
+</body>
+</html>

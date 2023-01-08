@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="./pic/favicon.ico"> -->
+    <script src="https://kit.fontawesome.com/aef7372e6a.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+body {
+  margin: 0px;
+}
+
+.night {
+  background: #0A1931;
+  width: 100vw;
+  height: 150vh;
+  color: #fff;
+  position: relative;
+}
+
+.moon {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  font-size: 56px;
+}
+
+.star {
+  position: absolute;
+  bottom: -30px;
+  font-size: 24px;
+}
+
+    </style>
+</head>
+<body>
+
+        <div class="night">
+          <span class="moon" data-speed="1">
+            <i class="fas fa-moon"></i>
+          </span>
+          <span class="star">
+            <i class="far fa-star"></i>
+          </span>
+          <span class="star">
+            <i class="fas fa-star"></i>
+          </span>
+          <span class="star">
+            <i class="fas fa-star"></i>
+          </span>
+          <span class="star">
+            <i class="far fa-star"></i>
+          </span>
+          <span class="star">
+            <i class="far fa-star"></i>
+          </span>
+          <span class="star">
+            <i class="far fa-star"></i>
+          </span>
+          <span class="star">
+            <i class="fas fa-star"></i>
+          </span>
+        </div>
+
+      <script>
+        const stars = document.querySelectorAll('.star');
+
+const setStarInitXPosition = (star) => {
+  const START_WIDTH = 24;
+  const windowWidth = window.innerWidth;
+  const starLeftPosition = (Math.random() * windowWidth) - START_WIDTH;
+  star.style.left = `${starLeftPosition}px`;
+};
+
+const setStarMoveSpeed = (star) => {
+  const starMoveSpeed = -1 - Math.random();
+  star.dataset.speed = starMoveSpeed;
+};
+
+stars.forEach(setStarInitXPosition);
+stars.forEach(setStarMoveSpeed);
+
+window.addEventListener('scroll', () => {
+  const scrollPositionY = window.pageYOffset;
+  const moon = document.querySelector('.moon');
+  const stars = document.querySelectorAll('.star');
+  const parallaxScrollingElements = [...stars, moon];
+
+  parallaxScrollingElements.forEach((element) => {
+    const elementMoveSpeed = Number(element.dataset.speed);
+    element.style.transform = `
+      translateY(${scrollPositionY * elementMoveSpeed}px)
+    `;
+  });
+});
+
+      </script>
+</body>
+</html>

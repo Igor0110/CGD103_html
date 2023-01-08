@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+		    color:deeppink;
+	    }
+    </style>
+</head>
+<body>
+    <h2>使用sort()    array Sort</h2>
+    <p>使用 ASCII編碼 電腦會自己以字串來排序</p>
+    <script>
+        var arr = [40, 20, 50, 70, 30, 80 ,7];
+        arr.sort();
+        document.write( arr, "<br>")
+    </script>
+
+
+
+<h2>兩數交換</h2>
+<script>
+    var a =10;
+    var b =20;
+    var temp; //暫存區temp'
+    temp = a;
+    a = b;
+    b = temp;
+    document.write("a:",a ,"<br>")
+    document.write("a:",b ,"<br>")
+
+    
+
+</script>
+<h2>sort.....自己排</h2>
+<p>記錄下一個元素 資料結構 時間空間</p>
+<p>從第0格資料到底五個資料</p>
+<p>都要和後面得資料比比看 (一直比到第6個)</p>
+<p>如果前面的資料比較大 ，兩數就要交換(假設是從小排到大)</p>
+<script>
+    var arr = [40, 20, 50, 70, 30, 80 ,7];
+
+    for(let i=0; i <6 ;i++){
+        
+        for(let j=i+1; j<=6; j++){
+
+           if(arr[i] > arr[j]){
+                let temp = arr[i];
+                arr[i] =arr[j];
+                arr[j] = temp;
+            
+           }
+            
+        }
+    }
+
+
+    document.write( arr, "<br>");
+</script>
+
+<h2>sort.....搭配 compare function 由小到大</h2>
+<p>記錄下一個元素 資料結構 時間空間</p>
+<p>從第0格資料到底五個資料</p>
+<p>都要和後面得資料比比看 (一直比到第6個)</p>
+<p>如果前面的資料比較大 ，兩數就要交換(假設是從小排到大)</p>
+<script>
+    
+
+    function myCompareAsc(a,b){
+        return a-b;
+    }
+    var arr = [40, 20, 50, 70, 30, 80 ,7];
+    arr.sort(myCompareAsc);
+
+    document.write( arr, "<br>");
+</script>
+<h2>sort.....搭配 compare function 由大排到小</h2>
+<script>
+    
+
+    function myCompareAsc(a,b){
+        return b-a;
+    }
+    var arr = [40, 20, 50, 70, 30, 80 ,7];
+    arr.sort(myCompareAsc);   //
+    document.write( arr, "<br>");
+</script>
+
+<h2>句子比大小</h2>
+
+<script>
+    // var str ="abcde";
+    // document.write(str.length,"<br>");
+
+    var words = [
+        "Treat yourself well.",
+        "No fear of words, no fear of years.",
+        "Don’t let the past steal your present.",
+        "Better late than never.",
+        "Stars can’t shine without darkness. ",
+        "Be cheerful and hopeful.",
+        "Have the ability to love oneself, have the strength to love others. ",
+        "Spend your life in your own way."
+    ]
+    words.sort();
+        for (let i in words){
+            document.write( words[i], "<br>");
+        }
+    
+</script>
+<h2>句子比大小</h2>
+
+<script>
+
+    var words = [
+        "Treat yourself well.",
+        "No fear of words, no fear of years.",
+        "Don’t let the past steal your present.",
+        "Better late than never.",
+        "Stars can’t shine without darkness. ",
+        "Be cheerful and hopeful.",
+        "Have the ability to love oneself, have the strength to love others. ",
+        "Spend your life in your own way."
+    ]
+    function compare2(a,b){
+        return a.length -b.length;
+    }
+    words.sort(compare2);
+
+        for (let i in words){
+            document.write(words[i],"<br>")
+        }
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.6.1.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script>
+		$(function () {	
+			$('#slideButton').click(function(){
+				$('img').slideToggle(2000,'easeInOutBack')
+			})
+		});			
+		//p標籤因為是block物件，所以會向上縮
+		//img 因為是圖片，所以只占一部分空間，固網左上角縮
+		//slideToggle() $(selector).slideToggle([speed,easing,callback])
+		//easings
+		// https://easings.net/
+
+	</script>
+</head>
+
+<body>
+	<button id="slideButton">Slide Toggle</button>
+	<p style="border:1px solid #ccc;">
+		<img src="../images/washDrawing/005.JPG">
+	</p>
+</body>
+
+</html>

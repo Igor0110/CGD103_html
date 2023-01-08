@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.6.1.js"></script>
+	<style></style>
+	<script>
+		$(function () {	
+            $('#theButton').click(function(){
+            // 1
+                // let theText = ''
+                // $(':text').each(function(){
+                //     theText += $(this).val() + ' '
+                // })
+                // $('#feedback').text(theText)
+
+            // 2 判斷是否每個欄位都有輸入
+                let theText = ''
+                let failed = false   // 假設每一格都有輸入
+
+                $(':text').each(function(){
+                    if($(this).val() == ''){
+                        failed = true
+                    }
+                })
+
+                if(failed == true){
+                    alert('Fill out all fields.')
+                }else{
+                    alert('Thanks for filling out all fields.')
+
+                    $(':text').each(function(){
+                        theText += $(this).val() + ' '
+                    })
+                    $('#feedback').text(theText)
+                }
+            })
+		});	
+        
+        // $.each(陣列,function(){})
+        // $(陣列).each(function(){})
+
+        // $.each(物件,function(){})
+        // $(物件).each(function(){})
+	</script>
+</head>
+<body>
+    <p>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <button id="theButton">Combine</button>
+    </p>
+    <div id="feedback"></div>
+</body>
+
+</html>

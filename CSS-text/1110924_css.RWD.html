@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        img{
+            vertical-align: middle;
+        }
+        .benner{
+            width: 100%;
+        }
+        .footer{
+            background-color: #aaa;
+            color: aliceblue;
+            text-align: center;
+            padding: 10px 0px;           
+        }
+        .wrap{
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        .about{
+            margin: 0px 0px 20px;
+        }
+        .about img{
+                border-radius: 30px;
+                
+            }
+        .service{
+            background-color: gold;
+            margin: 20px 0px;
+        }
+        .text h3{
+            text-align: center;
+            font-size: 38px;
+            color: cadetblue;
+        }
+        .item .pic img{
+            width: 100%;
+        }
+        .title{
+            background-color: brown;
+            padding: 30px 0px;
+        }
+        .title h2{
+            text-align: center;
+            font-size: 24px;
+            color: #aaa;
+        }
+        .title p{
+            text-align: center;
+        }
+        .text p{
+            font-size: 18px;
+            text-align: center;
+            
+        }
+        .item{
+            margin: 0px 10px 20px;
+        }
+        .service .item{
+            margin: 0px 10px 0px ;
+        }
+        @media screen and (min-width:768px) {
+            .item-group{
+                display: flex;
+            }
+            .service .item-group .item {
+                display: flex;
+            }
+
+
+            .service .item-group .item .pic,
+            .service .item-group .item .text{
+                width: 50%;
+                margin: 0;
+            }
+            .service .item-group .item .text{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0px 20px;
+            }
+        }
+
+        #menu_control{
+            position: absolute;
+            /* display: none; 可以設定none
+            但為什麼可以用absolute??*/
+            z-index: -2;
+            opacity: 0;
+        }
+        .header{
+            height: 50px;
+            background-color: #aaa;
+            position: relative;
+
+        }
+        .logo{
+            width: 60px;
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .logo img{
+            vertical-align: top;
+            width: 60px;
+            height: 40px;
+        }
+        .menu_btn{
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            display: block;            
+            position: absolute;
+            top: 5px;
+            right: 10px;
+
+        }
+        .menu_btn span{
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+            
+        }
+        .menu_btn::after{
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: #aaa;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px #aaf,
+                        0px -8px 0px #aaa;
+        }
+        nav{
+            width: 80%;
+            height: calc( 100vh - 50px);
+            background-color: orange;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+            transition: .5s;
+        }
+        nav a{
+            display: block;
+            text-decoration: none; 
+            /* 去除底線 */
+            color: blueviolet;
+            padding: 10px;
+            border-bottom: 1px solid blueviolet;
+            font-weight: 600;
+        }
+        #menu_control:checked ~ .header nav{
+            left: 0;
+
+        }
+        @media screen and (min-width:768px){
+            .menu_btn{
+                display: none;
+            }
+            .header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            nav{
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+
+            }
+            nav a{
+                border-bottom: none;
+            }
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu_control">
+
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"></a><img src="https://picsum.photos/60/60/?random=10">
+        </h1>
+        <label for="menu_control" class="menu_btn">
+            <span>選單</span>
+        </label>
+         <nav class="main-nav">
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+        
+        
+    </div>
+    <div class="benner">
+        <img src="https://picsum.photos/1400/500/?random=10">
+    </div>
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta hic, quam natus officia iste nobis. Animi, quam?</p>
+            </div>
+    
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=10">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nam, fugit doloribus ipsam laborum aut commodi aliquam ipsum? Nihil, dolorem temporibus cumque nemo aperiam obcaecati. Minus doloremque facilis fuga officiis!
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=11">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nam, fugit doloribus ipsam laborum aut commodi aliquam ipsum? Nihil, dolorem temporibus cumque nemo aperiam obcaecati. Minus doloremque facilis fuga officiis!
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=12">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nam, fugit doloribus ipsam laborum aut commodi aliquam ipsum? Nihil, dolorem temporibus cumque nemo aperiam obcaecati. Minus doloremque facilis fuga officiis!
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=13">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nam, fugit doloribus ipsam laborum aut commodi aliquam ipsum? Nihil, dolorem temporibus cumque nemo aperiam obcaecati. Minus doloremque facilis fuga officiis!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="service">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=20">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>美好選手自然，近日生活本頁享受食品查找，科技有限公司一時都要，這樣讓人來自共同年代會有神秘目前，堅持超過，億元美國好友生命求助一句話形式顏色下載缺乏鑒定夫妻分類教育活動，點頭代理立場開發商不久付款金額至少怎麼賓館幻想，它的婦女，放棄也有大盤教育精英，資金。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shop">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=31">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>美好選手自然，近日生活本頁享受食品查找，科技有限公司一時都要，這樣讓人來自共同年代會有神秘目前，堅持超過，億元美國好友生命求助一句話形式顏色下載缺乏鑒定夫妻分類教育活動，點頭代理立場開發商不久付款金額至少怎麼賓館幻想，它的婦女，放棄也有大盤教育精英，資金。
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=32">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>美好選手自然，近日生活本頁享受食品查找，科技有限公司一時都要，這樣讓人來自共同年代會有神秘目前，堅持超過，億元美國好友生命求助一句話形式顏色下載缺乏鑒定夫妻分類教育活動，點頭代理立場開發商不久付款金額至少怎麼賓館幻想，它的婦女，放棄也有大盤教育精英，資金。
+                        </p>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=33">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>美好選手自然，近日生活本頁享受食品查找，科技有限公司一時都要，這樣讓人來自共同年代會有神秘目前，堅持超過，億元美國好友生命求助一句話形式顏色下載缺乏鑒定夫妻分類教育活動，點頭代理立場開發商不久付款金額至少怎麼賓館幻想，它的婦女，放棄也有大盤教育精英，資金。
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        @gmail////////////////
+    </div>
+
+
+</body>
+</html>

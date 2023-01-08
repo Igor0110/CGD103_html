@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>作業13</h2>
+    <p>請寫一段JavaScript的程式,在網頁上隨機產生6個不重覆的大樂透數字(介於1..49之間的數字)</p>
+    <p>不重複的樂透 陣列一開始是空的，不知道要跑幾次，跑到六次就停，每一次都用if檢查，是否已經產生過，確認後再push進去</p>
+    <script>
+        var i =0;
+        var number=0;
+        var sum =0;
+        var arr = new Array(i);
+
+
+        while(number < 6){
+            i = Math.floor(Math.random()*49)+1;
+            
+            sum += i;
+            number ++; //---------
+            if(arr.indexOf(i) == -1){ //找不到
+                document.write("第",number+1,"次，抽到數字",i,"<br>")
+                arr.push(i)
+            }
+        }
+        console.log(arr);
+        document.write("總共抽獎",number,"次數，數字共",sum,"<br>")       
+
+    </script>
+</body>
+</html>

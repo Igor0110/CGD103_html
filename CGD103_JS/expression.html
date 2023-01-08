@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<style>
+	h2{
+		color:deeppink;
+	}
+</style>
+</head>
+<body>
+
+<h2>算術</h2>
+<script>
+	document.write( "10*4 : ", 10*4, "<br>"); //
+	document.write( "10/4 : ", 10/4, "<br>"); //
+	document.write( "10%4 : ", 10%4, "<br>"); //
+</script>
+
+
+<h2>字串</h2>
+<script>
+	var zone = "中壢區";
+ 	var road = "復興路46號";
+ 	var address = zone + road;
+ 	document.write(  "address : ", address, "<br>");	
+</script>
+
+<h2>比較</h2>
+<script>
+	document.write( "10>4 : ", 10>4, "<br>"); //true
+	document.write( "10<=4 : ", 10<=4, "<br>");  //false
+
+	document.write( "0===false : ", 0===false,"<br>"); //false
+	document.write( "0==false : ", 0==false,"<br>"); //true
+</script>
+
+
+<h2>邏輯</h2>
+<script>
+	document.write( "10>4 && 10<6 : ", 10>4 && 10<6,"<br>"); //false
+	document.write( "10>4 || 10<6 : ", 10>4 || 10<6,"<br>"); //true
+	document.write( "! 10>4  : ", ! 10>4, "<br>"); //false
+</script>
+
+
+<h2>位元</h2>
+<script>
+	document.write( "10 & 6 : ", 10 & 6, "<br>"); //
+	document.write( "10 | 6 : ", 10 | 6,"<br>"); //
+</script>
+
+
+<h2>指定</h2>
+<script>
+	var mm ,nn ,kk ;
+	mm = 0;
+	nn = 0;
+	kk = 0;
+	mm = nn = kk = 100;
+	document.write( "mm : ", mm, "<br>");
+	document.write( "nn : ", nn, "<br>");
+	document.write( "kk : ", kk, "<br>");
+
+	var x = 10;
+	x = x + 2;
+	x += 2;
+	document.write( "x : ", x, "<br>");
+
+	var y = 100;
+	y *=  2;
+	document.write( "y : ", y, "<br>");
+</script>
+
+
+<h2>typeof</h2>
+<script>
+	var myName = "Sara";
+	myName = 777;
+	document.write( "typeof myName : ", typeof myName,"<br>");
+</script>
+
+
+<h2>++在前-----0(從前從前的寫法)</h2>
+<script>
+	var x = 10;  // x:10 ->11
+	x = x + 1;
+	var y = x + 5;  //11+5  ,y:16
+	document.write( "x : ", x, "<br>"); //16
+	document.write( "y : ", y, "<br>"); //11
+</script>
+
+<h2>++在前-----1</h2>
+<script>
+	var x = 10;  // x:10->11
+	var y = ++x + 5;  //11+5  ,y:16
+	document.write( "x : ", x, "<br>"); //16
+	document.write( "y : ", y, "<br>"); //11
+</script>
+
+
+<h2>++在後-----1</h2>
+<script>
+	var x = 10;  //x:10->11
+	var y = x ++ + 5; //10+5->y:15
+	document.write( "x : ", x, "<br>"); //11
+	document.write( "y : ", y, "<br>"); //15
+</script>
+
+
+<h2>++在前-----2</h2>
+<script>
+	a = 10;  //10->11->12
+	b = ++a + ++a;  //11 + 12
+	document.write( "a : ", a, "<br>"); //12
+	document.write( "b : ", b, "<br>"); //23
+</script>
+
+<h2>++在後-----2</h2>
+<script>
+	a = 10; //a:10->11->12
+	b = a++ + a++;  //10+11
+	document.write( "a : ", a, "<br>"); //12
+	document.write( "b : ", b, "<br>"); //21
+</script>
+<!--  -->
+
+<h2>三元</h2>
+<script>
+var avg = 77;
+if(avg >=60){
+	document.write(  "Pass~<br>");
+}else{
+	document.write(  "Fail~<br>");
+}	
+
+avg = 59;
+document.write( avg>=60 ? "Pass!!" : "Fail!!" , "<br>"); //使用三元運算可以讓程式碼看起來比較精簡
+</script>
+
+<h2>if 句型4(if else if...)</h2>
+<script>
+	var avg = 98;
+	var grade;
+
+	if(avg>=90){
+		grade = "A";
+	}else if(avg>=80){
+		grade = "B";
+	}else if(avg>=70){
+		grade = "C";
+	}else if(avg>=60){
+		grade = "D";
+	}else{
+		grade = "E";
+	}
+
+	avg = 50;
+	grade = avg>=90 ? "A" :
+			avg>=80 ? "B" : 
+			avg>=70 ? "C" : 
+			avg>=60 ? "D" : "E";
+	document.write(  "grade : ", grade, "<br>");
+</script>
+</body>
+</html>

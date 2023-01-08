@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Slider use jQuery</title>
+	<link rel="stylesheet" href="./28_main.css">
+	<script src="./js/jquery-3.6.1.js"></script>
+	<script src="./29_new.js"></script>
+	<style>
+		textarea{
+			width: 300px;
+			height: 200px;
+
+		}
+	</style>
+	<script>
+		$(function(){
+			$('#agree').attr('disabled',true)
+
+			$('textarea').scroll(function(){
+				let scroll_top = $(this).scrollTop()  //760
+				let scroll_height = $(this)[0].scrollHeight  //964
+				let inner_height =  $(this).innerHeight()  //204
+				// $(物件)[0].JS的屬性或方法
+				// $(物件)[0].轉換成JS物件的屬性和方法
+				// $(物件).get(0).轉換成JS物件的屬性和方法
+
+				if(scroll_top == scroll_height - inner_height){
+                    $('#agree').attr('disabled',false)
+                }
+				// console.log(scroll_top)
+				// console.log(scroll_height)
+				// console.log(inner_height)
+
+			})
+			// step1
+			// $('#feedback').text(`You have scrolled`)
+
+			// step2 scrollTop():內部資料超過容器的高度(px)
+			// let scroll_top = $(this).scrollTop()
+			// $('#feedback').text(`You have scrolled,and are at potition ${scroll_top}`)
+
+			// step 3 加入css之後
+			// let scroll_top = $(this).scrollTop()
+			// $('#feedback').text(`You have scrolled,and are at potition ${scroll_top}`)
+
+
+		
+		})
+	</script>
+</head>
+<body>
+	<textarea name="" id="" cols="30" rows="10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat ex dolorum harum, vitae vel quod totam iusto ipsum repellat, nam praesentium aliquid in, quasi doloribus tenetur ipsam voluptate odio ad eos nisi. Cumque perferendis architecto consectetur, omnis mollitia vero amet culpa accusantium explicabo illo impedit expedita at optio corporis quae. Alias nostrum odit voluptas quibusdam nemo aut obcaecati totam nesciunt. Dolore eaque, nobis rem cupiditate quo saepe eum ratione in minima consequatur tempora porro dolor fugit autem? Reiciendis atque modi dolor voluptate maxime aut earum totam ipsam fugit officiis porro, assumenda voluptatibus expedita placeat iste consectetur officia nesciunt quas suscipit! Nihil ullam id eos, quod culpa delectus nulla laboriosam laudantium magni, dolore, repudiandae iusto. Eos aperiam ab vero a ipsam laudantium rerum perferendis, eveniet nobis commodi! Reprehenderit eveniet hic voluptatem laudantium. Nesciunt natus consequuntur quam ullam fugit recusandae inventore tempora rem fugiat modi doloribus amet est vero laudantium nisi, minus sit cum tenetur facere ad. Molestias reiciendis sequi enim maiores distinctio exercitationem fugiat, nam vitae aperiam pariatur porro, ex, dolorem cupiditate? Natus nostrum dicta unde ratione voluptatem vero quas maiores rerum. Ea, laborum. Perspiciatis sed officia dolorem iusto esse maiores nemo dolor minima accusantium mollitia, quis eligendi deleniti eos odit veniam corporis cum maxime itaque, perferendis deserunt. Quisquam adipisci voluptate vitae aliquid blanditiis optio odio dolor. Neque a quidem, rem debitis ab corrupti at veniam cum, modi totam assumenda voluptatem. Atque provident similique voluptatibus expedita natus necessitatibus cum unde perspiciatis quo incidunt error minus ea excepturi exercitationem itaque libero consequatur aspernatur fuga eos, perferendis nulla alias! Beatae vero quibusdam aliquid dolores sint! Velit, molestiae quidem maiores quos, exercitationem doloremque illum recusandae ad at tempora omnis, commodi ipsum. Cupiditate voluptatibus voluptates magni amet sit ducimus ipsum reprehenderit facilis? Mollitia voluptates harum tenetur ratione, laboriosam facilis alias numquam reiciendis dolor praesentium quae.</textarea>
+	<p>
+		<input type="checkbox" id="agree"  >
+		<!-- 預設先不勾 disabled-->
+		I agree to the terms and conditions.
+	</p>
+
+	<p id="feedback"></p>
+
+</body>
+
+</html>

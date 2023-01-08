@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .item{
+            background-color: aqua;
+            border: 1px solid red;
+            margin: 10px;
+            width: calc(100% / 2 - 20px); 
+            box-sizing: border-box;
+        }
+        .item img{
+            width: 100%;
+        }
+        .wrap{
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        
+        @media screen and (min-width:768px) {
+            .item{
+                width: calc(100% / 3 - 20px);
+            }
+        }
+        @media screen and (min-width:1024px) {
+            .item{
+                width: calc( 100% /4 - 20px);
+            }
+        }
+        @media screen and (min-width:1200px) {
+            .item{
+                width: calc( 100% /6 - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item">
+            <img src="https://picsum.photos/100/100/?random=10">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quae dolorem asperiores sit sunt, officiis sed? Facilis beatae quasi optio ex tenetur nesciunt sunt velit, aspernatur mollitia. Itaque, maxime ab.
+            </p>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/100/100/?random=10">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quae dolorem asperiores sit sunt, officiis sed? Facilis beatae quasi optio ex tenetur nesciunt sunt velit, aspernatur mollitia. Itaque, maxime ab.
+            </p>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/100/100/?random=10">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quae dolorem asperiores sit sunt, officiis sed? Facilis beatae quasi optio ex tenetur nesciunt sunt velit, aspernatur mollitia. Itaque, maxime ab.
+            </p>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/100/100/?random=10">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quae dolorem asperiores sit sunt, officiis sed? Facilis beatae quasi optio ex tenetur nesciunt sunt velit, aspernatur mollitia. Itaque, maxime ab.
+            </p>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/100/100/?random=10">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quae dolorem asperiores sit sunt, officiis sed? Facilis beatae quasi optio ex tenetur nesciunt sunt velit, aspernatur mollitia. Itaque, maxime ab.
+            </p>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/100/100/?random=10">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quae dolorem asperiores sit sunt, officiis sed? Facilis beatae quasi optio ex tenetur nesciunt sunt velit, aspernatur mollitia. Itaque, maxime ab.
+            </p>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/100/100/?random=10">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quae dolorem asperiores sit sunt, officiis sed? Facilis beatae quasi optio ex tenetur nesciunt sunt velit, aspernatur mollitia. Itaque, maxime ab.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
